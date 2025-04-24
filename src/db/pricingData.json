@@ -1,0 +1,40 @@
+{
+  "pricingData": [
+    {
+      "id": 1,
+      "title": "Plan Básico",
+      "price": 9.99,
+      "features": [
+        "Característica 1",
+        "Característica 2",
+        "Característica 3"
+      ],
+      "isPopular": false
+    },
+    {
+      "id": 2,
+      "title": "Plan Premium",
+      "price": 19.99,
+      "features": [
+        "Característica 1",
+        "Característica 2",
+        "Característica 3",
+        "Característica 4"
+      ],
+      "isPopular": true
+    },
+    {
+      "id": 3,
+      "title": "Plan Empresarial",
+      "price": 29.99,
+      "features": [
+        "Característica 1",
+        "Característica 2",
+        "Característica 3",
+        "Característica 4",
+        "Característica 5"
+      ],
+      "isPopular": false
+    }
+  ]
+} 
