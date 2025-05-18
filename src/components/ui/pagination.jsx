@@ -8,7 +8,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     }
     return (
         <div className="col-lg-12 col-md-12 col-sm-12">
-            <div className="blog-pagi">
+            <div className="pagination-wrapper">
                 <ul className="pagination">
                     <li className="page-item">
                         <button className="page-link" disabled={currentPage === 1} onClick={() => onPageChange(currentPage - 1)}>&lt;</button>

@@ -1,4 +1,3 @@
-import BlogSidebar from '@/components/sections/blogs/blogSidebar'
 import PageHeader from '@/components/sections/pageHeader'
 import React from 'react'
 import Link from 'next/link'
@@ -61,13 +60,9 @@ const CookiePolicy = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4">
-                            <BlogSidebar/>
-                        </div>
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

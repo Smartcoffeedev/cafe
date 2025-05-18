@@ -89,6 +89,7 @@ const nextConfig = {
         optimizeCss: true,
         scrollRestoration: true,
     },
+    output: "export",
 }
 
 module.exports = nextConfig 
