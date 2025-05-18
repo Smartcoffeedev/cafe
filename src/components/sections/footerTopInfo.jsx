@@ -73,13 +73,12 @@ const FooterTopInfo = () => {
                                 <div className="col-lg-6">
                                     <div className="content ft-shape">
                                         <div className="logo">
-                                            <h2>MeetAI</h2>
+                                            <h2>Smart Coffee</h2>
                                         </div>
-                                        <p>Aithm is poised to revolutionize the way we live and work, offering unprecedented possibilities for innovation and efficiency.</p>
+                                        <p>En Smart Coffee impulsamos la innovación y la excelencia en cada taza. Somos una empresa dedicada a transformar la experiencia del café a través de tecnología, pasión y calidad.</p>
                                         <ul>
                                             <li><Link href="#"><i className="bx bxl-facebook" /></Link></li>
                                             <li><Link href="#"><i className="bx bxl-instagram" /></Link></li>
-                                            <li><Link href="#"><i className="bx bxl-pinterest" /></Link></li>
                                             <li><Link href="#"><i className="bx bxl-linkedin-square" /></Link></li>
                                         </ul>
                                     </div>

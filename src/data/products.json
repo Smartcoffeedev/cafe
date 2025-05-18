@@ -1,0 +1,75 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Café Americano",
+      "description": "Café negro tradicional con agua calienteCafé negro tradicional con agua calienteCafé negro tradicional con agua calienteCafé negro tradicional con agua calienteCafé negro tradicional con agua calienteCafé negro tradicional con agua caliente",
+      "image": "/uploads/1745494893472.jpg",
+      "categories": [
+        "Café",
+        "Caliente"
+      ],
+      "oldPrice": "3.50",
+      "newPrice": "2.99",
+      "saleTag": true
+    },
+    {
+      "id": 2,
+      "name": "Cappuccino",
+      "description": "Espresso con leche espumada y cacao",
+      "image": "/uploads/1745494838408.jpg",
+      "categories": [
+        "Café",
+        "Caliente"
+      ],
+      "oldPrice": "",
+      "newPrice": "3.99",
+      "saleTag": "Merch"
+    },
+    {
+      "id": 3,
+      "name": "Croissant",
+      "description": "Panadería artesanal recién horneada",
+      "image": "/uploads/1745488838533.jpg",
+      "categories": [
+        "Panadería",
+        "Dulce"
+      ],
+      "oldPrice": "2.50",
+      "newPrice": "2.00",
+      "saleTag": true,
+      "newTag": false
+    },
+    {
+      "id": 4,
+      "name": "awdaw",
+      "description": "awdwa",
+      "image": "/uploads/1747413867684-723459246-28.png",
+      "categories": [
+        "awdwa"
+      ],
+      "oldPrice": "12",
+      "newPrice": "13",
+      "saleTag": "sale"
+    },
+    {
+      "id": 5,
+      "name": "waf",
+      "description": "awfwaf",
+      "image": "/uploads/1747414333799-43835918-1.png",
+      "categories": [
+        "Panadería",
+        "Caliente"
+      ],
+      "oldPrice": "12",
+      "newPrice": "16",
+      "saleTag": "sale"
+    }
+  ],
+  "categories": [
+    "Café",
+    "Caliente",
+    "Panadería",
+    "Dulce"
+  ]
+}

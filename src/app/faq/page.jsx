@@ -7,14 +7,7 @@ import React from 'react'
 const Faq = () => {
     return (
         <>
-            <PageHeader
-                className={"sbg-3"}
-                currentPage={"Faq"}
-                title={"Faq"}
-            />
             <FaqSection/>
-            <ContinuousLearning/>
-            <InstagramGallery/>
         </>
     )
 }

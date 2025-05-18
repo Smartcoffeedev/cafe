@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Renovación de Cafetería Principal",
+      "description": "Modernización completa de nuestra cafetería principal con nuevo diseño y equipamiento.",
+      "category": "Algo",
+      "image": "/uploads/1747409918870-995863502-26.png",
+      "date": "2024-03-15",
+      "benefits": [
+        "pilates"
+      ],
+      "featured": true,
+      "link": "https://www.hola.com"
+    },
+    {
+      "id": 2,
+      "title": "Expansión a Nuevo Local",
+      "description": "Apertura de nueva sucursal en zona residencial con concepto innovador.",
+      "category": "Algo",
+      "image": "/uploads/1745487615621.png",
+      "date": "2024-02-01",
+      "benefits": [],
+      "featured": false,
+      "link": "https://www.hola.com"
+    },
+    {
+      "id": 3,
+      "title": "Implementación de Sistema de Pedidos Online",
+      "description": "Desarrollo e implementación de plataforma digital para pedidos y reservas.",
+      "category": "awdawd",
+      "image": "/uploads/1745487615621.png",
+      "date": "2024-01-10",
+      "benefits": [],
+      "featured": false,
+      "link": "https://www.hola.com"
+    },
+    {
+      "id": 4,
+      "title": "awfdwa",
+      "description": "awfwaf",
+      "image": "/uploads/1747410970604-655604430-24.png",
+      "benefits": [
+        "awdawd"
+      ],
+      "category": "awdawd",
+      "date": "2025-05-16",
+      "featured": false,
+      "link": "https://www.hola.com"
+    }
+  ],
+  "categories": [
+    "renovacion",
+    "expansion",
+    "tecnologia",
+    "awdawd",
+    "Algo"
+  ]
+}

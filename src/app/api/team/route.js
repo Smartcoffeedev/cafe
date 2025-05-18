@@ -1,115 +1,78 @@
-import { NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
-import teamMembers from '@/db/teamMembers.json'
+import { promises as fs } from 'fs';
+import path from 'path';
 
-const DB_PATH = path.join(process.cwd(), 'src/db/teamMembers.json')
+const dataFile = path.join(process.cwd(), 'src/data/team.json');
 
-// Función auxiliar para leer el archivo JSON
-const readTeamMembers = () => {
+async function readTeam() {
     try {
-        const data = fs.readFileSync(DB_PATH, 'utf8')
-        return JSON.parse(data)
-    } catch (error) {
-        return { teamMembers: [] }
+        const file = await fs.readFile(dataFile, 'utf-8');
+        return JSON.parse(file);
+    } catch {
+        return [];
     }
 }
 
-// Función auxiliar para escribir en el archivo JSON
-const writeTeamMembers = (data) => {
-    fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2))
+async function writeTeam(data) {
+    await fs.writeFile(dataFile, JSON.stringify(data, null, 2), 'utf-8');
 }
 
 // GET - Obtener todos los miembros del equipo
 export async function GET() {
     try {
-        return NextResponse.json(teamMembers)
-    } catch (error) {
-        return NextResponse.json(
-            { error: 'Error al obtener los datos del equipo' },
-            { status: 500 }
-        )
+        const team = await readTeam();
+        return new Response(JSON.stringify(team), { status: 200 });
+    } catch (e) {
+        return new Response(JSON.stringify({ error: e.message }), { status: 500 });
     }
 }
 
 // POST - Crear un nuevo miembro
 export async function POST(request) {
     try {
-        const data = readTeamMembers()
-        const newMember = await request.json()
-        
-        // Generar un nuevo ID
-        const newId = data.teamMembers.length > 0 
-            ? Math.max(...data.teamMembers.map(m => m.id)) + 1 
-            : 1
-        
-        const memberWithId = { ...newMember, id: newId }
-        data.teamMembers.push(memberWithId)
-        
-        writeTeamMembers(data)
-        
-        return NextResponse.json(memberWithId, { status: 201 })
-    } catch (error) {
-        return NextResponse.json(
-            { error: 'Error al crear el miembro del equipo' },
-            { status: 500 }
-        )
+        const body = await request.json();
+        const team = await readTeam();
+        team.push(body);
+        await writeTeam(team);
+        return new Response(JSON.stringify(team), { status: 200 });
+    } catch (e) {
+        return new Response(JSON.stringify({ error: e.message }), { status: 500 });
     }
 }
 
 // PUT - Actualizar un miembro existente
 export async function PUT(request) {
     try {
-        const { searchParams } = new URL(request.url)
-        const id = parseInt(searchParams.get('id'))
-        const updateData = await request.json()
-        
-        const data = readTeamMembers()
-        const index = data.teamMembers.findIndex(member => member.id === id)
-        
-        if (index === -1) {
-            return NextResponse.json(
-                { error: 'Miembro no encontrado' },
-                { status: 404 }
-            )
+        const body = await request.json();
+        const { id, ...rest } = body;
+        const team = await readTeam();
+        const index = team.findIndex(member => member.id === id);
+        if (index !== -1) {
+            team[index] = { ...team[index], ...rest };
+            await writeTeam(team);
+            return new Response(JSON.stringify(team), { status: 200 });
+        } else {
+            return new Response(JSON.stringify({ error: 'Miembro no encontrado' }), { status: 404 });
         }
-        
-        data.teamMembers[index] = { ...data.teamMembers[index], ...updateData }
-        writeTeamMembers(data)
-        
-        return NextResponse.json(data.teamMembers[index])
-    } catch (error) {
-        return NextResponse.json(
-            { error: 'Error al actualizar el miembro del equipo' },
-            { status: 500 }
-        )
+    } catch (e) {
+        return new Response(JSON.stringify({ error: e.message }), { status: 500 });
     }
 }
 
 // DELETE - Eliminar un miembro
 export async function DELETE(request) {
     try {
-        const { searchParams } = new URL(request.url)
-        const id = parseInt(searchParams.get('id'))
-        
-        const data = readTeamMembers()
-        const index = data.teamMembers.findIndex(member => member.id === id)
-        
-        if (index === -1) {
-            return NextResponse.json(
-                { error: 'Miembro no encontrado' },
-                { status: 404 }
-            )
+        const body = await request.json();
+        const { id } = body;
+        const team = await readTeam();
+        const index = team.findIndex(member => member.id === id);
+        if (index !== -1) {
+            team.splice(index, 1);
+            await writeTeam(team);
+            return new Response(JSON.stringify(team), { status: 200 });
+        } else {
+            return new Response(JSON.stringify({ error: 'Miembro no encontrado' }), { status: 404 });
         }
-        
-        data.teamMembers.splice(index, 1)
-        writeTeamMembers(data)
-        
-        return NextResponse.json({ message: 'Miembro eliminado con éxito' })
-    } catch (error) {
-        return NextResponse.json(
-            { error: 'Error al eliminar el miembro del equipo' },
-            { status: 500 }
-        )
+    } catch (e) {
+        return new Response(JSON.stringify({ error: e.message }), { status: 500 });
     }
 } 

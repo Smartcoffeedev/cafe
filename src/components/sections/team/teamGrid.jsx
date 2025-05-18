@@ -1,23 +1,29 @@
-import teamMembers from '@/db/teamMembers.json'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import TeamCard from './teamCard'
 
 const TeamGrid = () => {
+    const [teamMembers, setTeamMembers] = useState([]);
+
+    useEffect(() => {
+        fetch('/api/team')
+            .then(res => res.json())
+            .then(data => setTeamMembers(Array.isArray(data) ? data : []));
+    }, []);
+
     return (
         <div className="team-section-2 pt-100">
             <div className="container">
                 <div className="row">
                     {
-                        teamMembers.map(({ description, id, image, name, role, social }, index) => (
-                            <div key={id} className="col-lg-4 col-sm-6" data-animation="fade-up" data-delay={index * 0.1}>
-                                <TeamCard description={description} imgSrc={image} name={name} role={role} social={social} height={494} width={416} />
+                        teamMembers.map((member, index) => (
+                            <div key={member.id} className="col-lg-4 col-sm-6" data-animation="fade-up" data-delay={index * 0.1}>
+                                <TeamCard {...member} />
                             </div>
                         ))
                     }
                 </div>
             </div>
         </div>
-
     )
 }
 

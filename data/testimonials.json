@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Juan Pérez",
+    "role": "Cliente Regular",
+    "content": "Excelente servicio y café de calidad. El ambiente es muy acogedor.",
+    "image": "/images/testimonials/default-avatar.jpg"
+  },
+  {
+    "id": 2,
+    "name": "María García",
+    "role": "Cliente VIP",
+    "content": "El mejor café que he probado. El personal es muy amable y profesional.",
+    "image": "/images/testimonials/default-avatar.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Carlos Ruiz",
+    "role": "Cliente Frecuente",
+    "content": "Un lugar perfecto para trabajar y disfrutar de un buen café.",
+    "image": "/uploads/1747358951543-159191663-28.png"
+  },
+  {
+    "name": "pepe",
+    "role": "awdwafwaf",
+    "content": "wafwadwadawkjhgckhgctkhgckhgccccccccckgjckhgcjkhhgckhgckhckhgcccccccccccccccccckckhgcmkhgchkgckhgckgckhgckghckgckghckgckckckkhgckghckhgckhgc",
+    "image": "/uploads/1747358152486-477131185-24.png",
+    "id": 4
+  }
+]

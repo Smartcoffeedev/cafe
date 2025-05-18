@@ -1,91 +1,101 @@
+'use client'
+
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
-import FooterTopInfo from './footerTopInfo'
+import { getFooterData } from '@/utils/dataUtils'
 
 const Footer = () => {
-  return (
-    <div className="footer-area">
-      <FooterTopInfo />
-      <div className="footer-widget-info ptb-100">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 col-sm-12 col-md-12">
-              <div className="subscribe-area">
-                <h2>Subscribe To Ai!</h2>
-                <p>Artificial Intelligence is a transformation field of computer science that empowers machines to perform</p>
-                <div className="subscribe-wrapper">
-                  <div className="subscribe-box">
-                    <form data-toggle="validator">
-                      <div className="row align-items-center">
-                        <div className="col-md-8">
-                          <input type="text" className="form-control" placeholder="Your email address @" name="EMAIL" required autoComplete="off" />
-                        </div>
-                        <div className="col-lg-4">
-                          <button type="submit" className="btn">Subscribe</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-2 col-sm-6 col-md-4">
-              <div className="footer-widget">
-                <h4>Quick Links</h4>
-                <ul>
-                  <li><Link href="/">Home</Link></li>
-                  <li><Link href="/about">About Us</Link></li>
-                  <li><Link href="/gallery">Gallery</Link></li>
-                  <li><Link href="/portfolio">Portfolio</Link></li>
-                  <li><Link href="/team">Developers</Link></li>
-                  <li><Link href="/contact">Contact Us</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-2 col-sm-6 col-md-4">
-              <div className="footer-widget">
-                <h4>Resource</h4>
-                <ul>
-                  <li><Link href="/blog">Blogs</Link></li>
-                  <li><Link href="/term-condition">Term of services</Link></li>
-                  <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-                  <li><Link href="/cookie-policy">Cookie Policy</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-2 col-sm-6 col-md-4">
-              <div className="footer-widget">
-                <h4>Office</h4>
-                <span>175 5th Ave, New York, NY 10010, USA</span>
-                <Link className="ft-mail" href="/mailto:example@example.com">example@example.com</Link>
-                <Link className="ft-number" href="/tel:+18408412569">+1 840 841 25 69</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="copy-right-area">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-4 col-lg-5">
-              <div className="cpr-left">
-                <p>Copyright© 2025 Aithm. All rights reserved.</p>
-              </div>
-            </div>
-            <div className="col-xl-8 col-lg-7">
-              <div className="cpr-right">
-                <ul>
-                  <li><Link href="/term-condition">Term of services</Link></li>
-                  <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-                  <li><Link href="/cookie-policy">Cookie Policy</Link></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  const footerData = getFooterData();
 
+  return (
+    <footer className="footer-area">
+      <div className="footer-content">
+        <div className="footer-logo">
+          <Image
+            src={'/img/all-img/logo/logotipo w.png'}
+            alt="SmartCoffee Logo"
+            width={150}
+            height={50}
+            style={{ margin: '0 auto' }}
+          />
+        </div>
+        <p className="footer-desc">{footerData.description}</p>
+        <div className="footer-contact">
+          <span><i className="bx bx-map"></i> {footerData.contactInfo.address}</span>
+          <span><i className="bx bx-envelope"></i> <Link href={`mailto:${footerData.contactInfo.email}`}>{footerData.contactInfo.email}</Link></span>
+          <span><i className="bx bx-phone"></i> <Link href={`tel:${footerData.contactInfo.phone.replace(/\s+/g, '')}`}>{footerData.contactInfo.phone}</Link></span>
+        </div>
+        <div className="footer-social">
+          <a href={footerData.socialMedia.facebook} target="_blank" rel="noopener noreferrer"><i className="bx bxl-facebook"></i></a>
+          <a href={footerData.socialMedia.instagram} target="_blank" rel="noopener noreferrer"><i className="bx bxl-instagram"></i></a>
+          <a href={footerData.socialMedia.twitter} target="_blank" rel="noopener noreferrer"><i className="bx bxl-twitter"></i></a>
+        </div>
+      </div>
+      <div className="footer-copyright">
+        <p>{footerData.copyright}</p>
+      </div>
+      <style jsx>{`
+        .footer-area {
+          background: #0a0a1a;
+          color: #fff;
+          padding: 48px 0 0 0;
+        }
+        .footer-content {
+          max-width: 500px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        .footer-logo {
+          margin-bottom: 18px;
+        }
+        .footer-desc {
+          font-size: 1.1rem;
+          margin-bottom: 18px;
+          color: #bdbdbd;
+        }
+        .footer-contact {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          margin-bottom: 18px;
+          font-size: 1rem;
+        }
+        .footer-contact i {
+          margin-right: 8px;
+          color: #43A5FE;
+        }
+        .footer-contact a {
+          color: #43A5FE;
+          text-decoration: none;
+        }
+        .footer-social {
+          margin-bottom: 18px;
+        }
+        .footer-social a {
+          color: #fff;
+          font-size: 1.6rem;
+          margin: 0 10px;
+          transition: color 0.2s;
+        }
+        .footer-social a:hover {
+          color: #43A5FE;
+        }
+        .footer-copyright {
+          border-top: 1px solid #222;
+          margin-top: 24px;
+          padding: 18px 0 8px 0;
+          text-align: center;
+          color: #bdbdbd;
+          font-size: 0.95rem;
+        }
+        @media (max-width: 600px) {
+          .footer-content {
+            padding: 0 10px;
+          }
+        }
+      `}</style>
+    </footer>
   )
 }
 

@@ -9,16 +9,8 @@ import React from 'react'
 const About = () => {
   return (
     <>
-      <PageHeader
-        className={"sbg-5"}
-        currentPage={"About us"}
-        title={"About Us"}
-      />
       <AboutOne className={"pt-100"} inVideoBg={true}/>
-      <WorkProcess isLampImgTop={true}/>
-      <VideoSection className={"vid-bg-1"} />
-      <TestimonialOne />
-      <InstagramGallery />
+
     </>
   )
 }

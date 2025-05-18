@@ -3,16 +3,26 @@ import React from 'react'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import Rating from '../../ui/rating'
 import Link from 'next/link'
-import Image from 'next/image'
+import SafeImage from '@/components/common/SafeImage'
 
-const ProductOverView = () => {
+const ProductOverView = ({ product }) => {
+    if (!product) {
+        return <div className='row align-items-center'><div className="col-12"><p>Producto no encontrado o sin información.</p></div></div>;
+    }
     return (
         <div className='row align-items-center'>
             <div className="col-lg-5 col-md-12">
                 <div className="products-details-image">
                     <PhotoProvider>
-                        <PhotoView src={"/img/shop/products-img3.jpg"}>
-                            <Image width={526} height={601} sizes='100vw' src="/img/shop/products-img3.jpg" alt="image" />
+                        <PhotoView src={product.image}>
+                            <SafeImage 
+                                width={526} 
+                                height={601} 
+                                sizes='100vw' 
+                                src={product.image} 
+                                alt={product.name}
+                                fallbackType="products"
+                            />
                         </PhotoView>
                     </PhotoProvider>
                 </div>
@@ -20,38 +30,34 @@ const ProductOverView = () => {
             <div className="col-lg-7 col-md-12">
                 <div className="products-details-desc">
                     <div className="products-review">
-                        <Rating rating={4.5} isCountNumberShow={true}/>
+                        <Rating rating={product.rating || 4.5} isCountNumberShow={true}/>
                         
-                        <Link href="/single-products" className="rating-count">3 reviews</Link>
-                        <span className="in-stock">In Stock</span>
+                        <Link href={`/single-products/${product.id}`} className="rating-count">
+                            {product.reviews?.length || 0} reseñas
+                        </Link>
+                        <span className="in-stock">En Stock</span>
                     </div>
-                    <h3>Spider Headphone</h3>
-                    <p>One of the standout features of AI headphones is their ability to create adaptive soundscapes tailored to individual users. These headphones learn from your music choices, environmental factors Imagine walking through a bustling city essential ambient sounds while still providing an immersive music experience.</p>
+                    <h3>{product.name}</h3>
+                    <p>{product.description}</p>
                     <div className="price">
-                        <span className="old-price">$210.00</span>
-                        <span className="new-price"> $176.00</span>
-                    </div>
-                    <div className="products-add-to-cart">
-                        <div className="input-counter">
-                            <span className="minus-btn"><i className="bx bx-minus" /></span>
-                            <input type="text" defaultValue={1} />
-                            <span className="plus-btn"><i className="bx bx-plus" /></span>
-                        </div>
-                        <button type="submit" className="default-btn"><i className="bx bxs-cart-add" /> <span>Add to Cart</span></button>
+                        {product.oldPrice && <span className="old-price">{product.oldPrice}</span>}
+                        <span className="new-price">{product.newPrice}</span>
                     </div>
                     <div className="products-meta">
-                        <span>SKU : <span className="sku">LGRVUT96</span></span>
-                        <span>Category : <Link href="/products-list">Headphone</Link></span>
-                        <span>Tag : <Link href="/products-list">Headphone</Link></span>
-                    </div>
-                    <div className="products-share">
-                        <ul className="social">
-                            <li><span>Share:</span></li>
-                            <li><Link href="#" className="facebook"><i className="bx bxl-facebook" /></Link></li>
-                            <li><Link href="#" className="twitter"><i className="bx bxl-pinterest" /></Link></li>
-                            <li><Link href="#" className="linkedin"><i className="bx bxl-linkedin" /></Link></li>
-                            <li><Link href="#" className="instagram"><i className="bx bxl-instagram" /></Link></li>
-                        </ul>
+                        <span>Categoría : 
+                            {product.categories?.map((category, index) => (
+                                <Link key={index} href={`/products-list?category=${category}`}>
+                                    {category}{index < product.categories.length - 1 ? ', ' : ''}
+                                </Link>
+                            ))}
+                        </span>
+                        <span>Etiquetas : 
+                            {product.tags?.map((tag, index) => (
+                                <Link key={index} href={`/products-list?tag=${tag}`}>
+                                    {tag}{index < product.tags.length - 1 ? ', ' : ''}
+                                </Link>
+                            ))}
+                        </span>
                     </div>
                 </div>
             </div>

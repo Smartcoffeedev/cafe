@@ -25,9 +25,6 @@ const SingleProducts = () => {
                                     <li className="nav-item">
                                         <a className="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description-tab-pane" role="tab" aria-controls="description-tab-pane">Description</a>
                                     </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-tab-pane" role="tab" aria-controls="reviews-tab-pane">Reviews (2)</a>
-                                    </li>
                                 </ul>
                                 <div className="tab-content" id="myTabContent">
                                     <ProductDescription />

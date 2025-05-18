@@ -1,0 +1,74 @@
+{
+  "galleryItemsData": [
+    {
+      "id": 1,
+      "src": "/uploads/1745494893472.jpg",
+      "category": "Café"
+    },
+    {
+      "id": 3,
+      "src": "/uploads/1745488838533.jpg",
+      "category": "Café"
+    },
+    {
+      "id": 4,
+      "src": "/uploads/1745488804080.jpg",
+      "category": "Local"
+    },
+    {
+      "id": 1747508591253,
+      "category": "Café",
+      "src": "/uploads/1747509782489-448942750-1.png"
+    },
+    {
+      "id": 1747509996728,
+      "category": "Café",
+      "src": "/uploads/1747510721702-940691879-2.png"
+    },
+    {
+      "id": 1747510722613,
+      "category": "Café",
+      "src": "/uploads/1747510730164-557523112-3.png"
+    },
+    {
+      "id": 1747510730852,
+      "category": "Local",
+      "src": "/uploads/1747510790537-554131686-3.png"
+    },
+    {
+      "id": 1747510791447,
+      "category": "Eventos",
+      "src": "/uploads/1747510808167-396726346-26.png"
+    },
+    {
+      "id": 1747510809413,
+      "category": "Local",
+      "src": "/uploads/1747510816948-61893353-27.png"
+    },
+    {
+      "id": 1747510818169,
+      "category": "Café",
+      "src": "/uploads/1747510822969-923565212-3.png"
+    },
+    {
+      "id": 1747510823603,
+      "category": "Local",
+      "src": "/uploads/1747510832739-654393228-3.png"
+    },
+    {
+      "id": 1747510837398,
+      "category": "Local",
+      "src": "/uploads/1747510843364-713629006-28.png"
+    },
+    {
+      "id": 1747510846179,
+      "category": "Local",
+      "src": "/uploads/1747510869138-377517923-25.png"
+    }
+  ],
+  "categories": [
+    "Café",
+    "Local",
+    "Eventos"
+  ]
+}

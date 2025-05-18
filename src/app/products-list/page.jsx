@@ -5,11 +5,6 @@ import React from 'react'
 const ProductsList = () => {
     return (
         <>
-            <PageHeader
-                className={"sbg-2"}
-                currentPage={"Products List"}
-                title={"Products List"}
-            />
             <ProducstGridView/>
         </>
     )

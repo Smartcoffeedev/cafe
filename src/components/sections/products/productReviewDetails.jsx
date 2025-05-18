@@ -1,7 +1,8 @@
-import React from 'react'
+'use client';
+import React, { useEffect, useState } from 'react'
 import Rating from '../../ui/rating'
-import reviewsData from '@/db/reviewsData.json';
 import Image from 'next/image';
+
 const ratingData = {
     5: 100,
     4: 75,
@@ -10,13 +11,20 @@ const ratingData = {
     1: 0,
 };
 
-const ProductReviewDetails = () => {
+const ProductReviewDetails = (props) => {
+    const [productsData, setProductsData] = useState([]);
+    useEffect(() => {
+        fetch('/api/products')
+            .then(res => res.json())
+            .then(data => setProductsData(data.productsData || []));
+    }, []);
+
     return (
         <div className="tab-pane fade" id="reviews-tab-pane" role="tabpanel" aria-labelledby="reviews-tab" tabIndex={0}>
             <div className="row">
                 <div className="col-lg-6">
                     <div className="products-reviews">
-                        <h3>Products Rating</h3>
+                        <h3>Calificación del Producto</h3>
                         <Rating rating={4} />
                         <div className="rating-count">
                             <span>5.00</span>
@@ -25,7 +33,7 @@ const ProductReviewDetails = () => {
                             {[5, 4, 3, 2, 1].map((star) => (
                                 <React.Fragment key={star}>
                                     <div className="side">
-                                        <div>{star} star{star > 1 && 's'}</div>
+                                        <div>{star} estrella{star > 1 && 's'}</div>
                                     </div>
                                     <div className="middle">
                                         <div className="bar-container">
@@ -45,8 +53,8 @@ const ProductReviewDetails = () => {
                 </div>
                 <div className="col-lg-6">
                     <div className="review-form-wrapper">
-                        <h3>Add a review</h3>
-                        <p className="comment-notes">Your email address will not be published. Required fields are marked <span>*</span></p>
+                        <h3>Agregar una reseña</h3>
+                        <p className="comment-notes">Tu dirección de correo electrónico no será publicada. Los campos obligatorios están marcados con <span>*</span></p>
                         <form>
                             <div className="row">
                                 <div className="col-lg-12 col-md-12">
@@ -60,7 +68,7 @@ const ProductReviewDetails = () => {
                                 </div>
                                 <div className="col-lg-6 col-md-6">
                                     <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="Name *" />
+                                        <input type="text" className="form-control" placeholder="Nombre *" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
@@ -70,17 +78,17 @@ const ProductReviewDetails = () => {
                                 </div>
                                 <div className="col-lg-12 col-md-12">
                                     <div className="form-group">
-                                        <textarea placeholder="Your review" className="form-control" cols={30} rows={6} defaultValue={""} />
+                                        <textarea placeholder="Tu reseña" className="form-control" cols={30} rows={6} defaultValue={""} />
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-md-12">
                                     <p className="comment-form-cookies-consent">
                                         <input type="checkbox" id="test1" />
-                                        <label htmlFor="test1">Save my name, email, and website in this browser for the next time I comment.</label>
+                                        <label htmlFor="test1">Guardar mi nombre, email y sitio web en este navegador para la próxima vez que comente.</label>
                                     </p>
                                 </div>
                                 <div className="col-lg-12 col-md-12">
-                                    <button type="submit">Submit</button>
+                                    <button type="submit">Enviar</button>
                                 </div>
                             </div>
                         </form>
@@ -88,18 +96,43 @@ const ProductReviewDetails = () => {
                 </div>
             </div>
             <div className="products-review-comments">
-                <h3>{reviewsData.length} Reviews</h3>
-                {reviewsData.map((review, index) => (
-                    <div key={index} className="user-review">
-                        <Image width={90} height={90} src={review.image} alt={review.name} />
-                        <div className="review-rating">
-                            <Rating rating={review.rating} />{" "}
-                            <span className="d-inline-block">{review.name}</span>
+                <h3>Productos Relacionados</h3>
+                <div className="row">
+                    {productsData.map((product) => (
+                        <div key={product.id} className="col-lg-4 col-md-6">
+                            <div className="product-card">
+                                <div className="product-image">
+                                    <Image 
+                                        src={product.image} 
+                                        alt={product.name}
+                                        width={300}
+                                        height={300}
+                                        className="img-fluid"
+                                    />
+                                    {(product.saleTag || product.newTag) && (
+                                        <div className="product-tags">
+                                            {product.saleTag && (
+                                                <span className="sale-tag">{product.saleTag}</span>
+                                            )}
+                                            {product.newTag && (
+                                                <span className="new-tag">{product.newTag}</span>
+                                            )}
+                                        </div>
+                                    )}
+                                </div>
+                                <div className="product-info">
+                                    <h4>{product.name}</h4>
+                                    <div className="price">
+                                        <span className="new-price">{product.newPrice}</span>
+                                        {product.oldPrice && (
+                                            <span className="old-price">{product.oldPrice}</span>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <span className="d-block sub-comment">{review.commentTitle}</span>
-                        <p>{review.comment}</p>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     )

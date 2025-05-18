@@ -1,34 +1,32 @@
-import Link from 'next/link'
-import React from 'react'
-import Spline from '@splinetool/react-spline/next'
+'use client';
+
+import React from 'react';
+import styles from './heroOne.module.css';
+import ModelViewer from '../3DModelViewer';
 
 const HeroOne = () => {
   return (
-    <div className="hero-section-2">
-      <div className="spline-container">
-        <Spline
-          scene="https://prod.spline.design/bVFzOxZtpji56x2j/scene.splinecode"
-        />
-      </div>
+    <section className={styles.heroSection}>
+      <ModelViewer />
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="hero-content-2">
-              <div className="sub-title-2" data-animation="fade-zoom-in" data-delay={0.4}>
+            <div className={styles.heroContent}>
+              <div className={styles.subTitle} data-animation="fade-zoom-in" data-delay={0.4}>
                 <p>SMART COFFEE</p>
               </div>
-              <h2>
+              <div className={styles.heroTitle}>
                 <span data-animation="fade-up">DISFRUTA DE UN BUEN CAFÉ</span>
                 <span data-animation="fade-up" data-delay={0.2}>
-                  <span className="sub-head">MIENTRAS CONECTAS CON EL FUTURO</span>
+                  <span className={styles.subHead}>MIENTRAS CONECTAS CON EL FUTURO</span>
                 </span>
-              </h2>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default HeroOne
+export default HeroOne;

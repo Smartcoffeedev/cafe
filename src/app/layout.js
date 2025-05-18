@@ -14,7 +14,8 @@ import SetBackgroundColor from '@/components/ui/setBackgroundColor';
 import ScrollToTop from '@/components/ui/scrollToTop';
 import AddAnimation from '@/components/ui/addAnimation';
 import Loading from '@/components/ui/loading';
-
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export const metadata = {
   title: "Aithm - AI Agency & Futuristic Startup Next.js Template",
@@ -22,10 +23,19 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const [showLoader, setShowLoader] = useState(true);
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+
+  useEffect(() => {
+    setShowLoader(true);
+    const timeout = setTimeout(() => setShowLoader(false), 1200);
+    return () => clearTimeout(timeout);
+  }, [pathname]);
+
   return (
     <html lang="en">
       <body>
-        <Loading />
+        <Loading show={showLoader} />
         <SetBackgroundColor />
         <BootstrapForBrowser />
         <Header />

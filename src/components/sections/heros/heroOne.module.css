@@ -1,0 +1,143 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.splineContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.splineContainer canvas {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.subTitle {
+  margin-bottom: 20px;
+}
+
+.subTitle p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mainColor2);
+  font-weight: 700;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: var(--whiteColor);
+}
+
+.subHead {
+  display: block;
+  font-size: 36px;
+  color: var(--mainColor2);
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.splineLoading {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.loadingSpinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--mainColor2);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.heroContent * {
+  pointer-events: auto;
+}
+
+.heroContent .heroTitle {
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--whiteColor);
+  margin-bottom: 40px;
+  line-height: 1.1;
+}
+
+.heroContent .subHead {
+  color: var(--mainColor2);
+  display: block;
+  font-size: 48px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 100vh;
+    padding: 60px 0 0 0;
+  }
+  
+  .heroContent {
+    padding: 0 10px;
+  }
+  
+  .heroTitle {
+    font-size: 32px;
+  }
+  
+  .subHead {
+    font-size: 22px;
+  }
+  
+  .subTitle p {
+    font-size: 15px;
+  }
+
+  .splineContainer {
+    min-height: 300px;
+  }
+
+  .splineLoading {
+    min-height: 300px;
+  }
+} 

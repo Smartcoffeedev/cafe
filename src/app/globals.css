@@ -189,4 +189,21 @@ section {
   padding: 2rem;
   min-height: calc(100vh - 4rem);
   color: var(--whiteColor);
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 64px;
+  }
+}
+@media (min-width: 769px) {
+  main {
+    padding-top: 80px;
+  }
+}
+
+/* --- Scroll horizontal bloqueado globalmente --- */
+html, body {
+  overflow-x: hidden;
+  width: 100vw;
 } 
