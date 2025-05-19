@@ -1,11 +1,11 @@
 import React from 'react'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 
 const SearchBox = () => {
     return (
         <div className="aithm offcanvas offcanvas-top" tabIndex={-1} id="offcanvasTop">
             <div className="offcanvas-header">
-                <h5 className="offcanvas-title" id="offcanvasDarkLabel"> <Link href="/">Aithm</Link></h5>
+                <h5 className="offcanvas-title" id="offcanvasDarkLabel"> <Link to="/">Aithm</Link></h5>
                 <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" />
             </div>
             <div className="offcanvas-body">
@@ -26,7 +26,6 @@ const SearchBox = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 

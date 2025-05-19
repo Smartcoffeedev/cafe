@@ -1,73 +1,46 @@
-import Image from 'next/image';
 import React from 'react'
 
 const processSteps = [
     {
         id: 1,
-        title: "Intelligent Automation",
-        description: "Experience the power of intelligent automation as our AI services streamline your workflows.",
+        title: 'Selección de Granos',
+        description: 'Seleccionamos los mejores granos de café de origen único.',
+        icon: '/src/assets/img/process-1.png'
     },
     {
         id: 2,
-        title: "Predictive Analytics",
-        description: "Uncover valuable insights, trends, and patterns to make informed decisions that drive business growth.",
+        title: 'Tostado Perfecto',
+        description: 'Nuestro sistema de tostado controlado por IA garantiza el punto exacto.',
+        icon: '/src/assets/img/process-2.png'
     },
     {
         id: 3,
-        title: "Enhanced Security",
-        description: "AI services fortify your digital infrastructure. Utilize advanced algorithms to detect and mitigate potential threats.",
-    },
+        title: 'Preparación Inteligente',
+        description: 'La cafetera aprende tus preferencias y ajusta cada preparación.',
+        icon: '/src/assets/img/process-3.png'
+    }
 ];
 
-const WorkProcess = ({ order, isLampImgTop }) => {
+const WorkProcess = () => {
     return (
-        <div className="process-wrap ptb-100">
+        <section className="work-process">
             <div className="container">
-                <div className="row align-items-center">
-                    <div className={`col-lg-6 col-md-6 ${order}`}>
-                        <div className="process-content" data-animation="fade-up" data-delay={0.1}>
-                            <div className="content-title">
-                                <div className="sub-title-2">
-                                    <p>Working Process</p>
+                <h2>Nuestro Proceso</h2>
+                <div className="row">
+                    {processSteps.map((step) => (
+                        <div key={step.id} className="col-md-4">
+                            <div className="process-card">
+                                <div className="icon">
+                                    <img src={step.icon} alt={step.title} />
                                 </div>
-                                <h2>Get Images of from 3 simple process</h2>
-                                <p>They evolve and learn from experiences. Benefit from adaptive algorithms that continuously improve performance:</p>
-                            </div>
-                            <div className="process-item-wrap">
-                                {processSteps.map((step) => (
-                                    <div key={step.id} className="process-item">
-                                        <span>{String(step.id).padStart(2, "0")}</span>
-                                        <div className="process-info">
-                                            <h4>{step.title}</h4>
-                                            <p>{step.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
+                                <h3>{step.title}</h3>
+                                <p>{step.description}</p>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                        <div className="img-wrapper" data-animation="fade-zoom-in" data-delay={0.1}>
-                            <div className="img-box">
-                                {
-                                    isLampImgTop ?
-                                        <>
-                                            <Image width={636} height={800} sizes='100vw' className="image-box-item" src="/img/all-img/pricing-image-3.png" alt="image" />
-                                            <Image width={636} height={800} sizes='100vw' className="image-box-item" src="/img/all-img/pricing-image-2.png" alt="image" />
-                                        </>
-                                        :
-                                        <>
-                                            <Image width={636} height={800} sizes='100vw' className="image-box-item" src="/img/all-img/pricing-image-2.png" alt="image" />
-                                            <Image width={636} height={800} sizes='100vw' className="image-box-item" src="/img/all-img/pricing-image-3.png" alt="image" />
-                                        </>
-                                }
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
-        </div>
-
+        </section>
     )
 }
 

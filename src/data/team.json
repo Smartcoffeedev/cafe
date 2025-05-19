@@ -1,67 +1,24 @@
 [
   {
-    "name": "Ulises",
-    "position": "awdwad",
-    "bio": "kuyyv",
-    "image": "/uploads/1747362616544-774172774-27.png",
-    "socialMedia": {
-      "linkedin": "https://www.wafawf.com",
-      "twitter": "https://www.wafawf.com",
-      "github": "https://www.wafawf.com",
-      "instagram": "https://www.wafawf.com"
-    },
-    "id": 4
+    "id": 1,
+    "name": "Juan Pérez",
+    "role": "Barista Principal",
+    "image": "/img/all-img/team/juan.jpg",
+    "social": {
+      "facebook": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "instagram": "https://instagram.com"
+    }
   },
   {
-    "name": "ULISES ANDRES MARIN QUINTEROS",
-    "position": "awfwaf",
-    "bio": "jyfct",
-    "image": "/uploads/1747362684456-637909000-24.png",
-    "socialMedia": {
-      "linkedin": "https://www.wafawf.com",
-      "twitter": "https://www.wafawf.com",
-      "github": "https://www.wafawf.com",
-      "instagram": "https://www.wafawf.com"
-    },
-    "id": 5
-  },
-  {
-    "name": "UlisesV1",
-    "position": "awfwaf",
-    "bio": "r4",
-    "image": "/uploads/1747362706742-125280043-26.png",
-    "socialMedia": {
-      "linkedin": "https://www.wafawf.com",
-      "twitter": "https://www.wafawf.com",
-      "github": "https://www.wafawf.com",
-      "instagram": "https://www.wafawf.com"
-    },
-    "id": 6
-  },
-  {
-    "name": "Blockenfy",
-    "position": "awdwad",
-    "bio": "esdfe",
-    "image": "/uploads/1747362723451-99201035-3.png",
-    "socialMedia": {
-      "linkedin": "https://www.wafawf.com",
-      "twitter": "https://www.wafawf.com",
-      "github": "https://www.wafawf.com",
-      "instagram": "https://www.wafawf.com"
-    },
-    "id": 7
-  },
-  {
-    "name": "Edul",
-    "position": "pepe",
-    "bio": "lljkanf",
-    "image": "/uploads/1747533345440-854680596-24.png",
-    "socialMedia": {
-      "linkedin": "https://www.wafawf.com",
-      "twitter": "https://www.wafawf.com",
-      "github": "https://www.wafawf.com",
-      "instagram": "https://www.wafawf.com"
-    },
-    "id": 8
+    "id": 2,
+    "name": "María García",
+    "role": "Gerente",
+    "image": "/img/all-img/team/maria.jpg",
+    "social": {
+      "facebook": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "instagram": "https://instagram.com"
+    }
   }
-]
+] 

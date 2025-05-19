@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Espresso Clásico",
+    "description": "Espresso tradicional con granos seleccionados de origen único.",
+    "image": "/img/all-img/jose.jpg",
+    "categories": ["Café", "Caliente"],
+    "oldPrice": null,
+    "newPrice": "$45",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 2,
+    "name": "Cappuccino Premium",
+    "description": "Cappuccino cremoso con leche vaporizada y arte latte.",
+    "image": "/img/all-img/jose.jpg",
+    "categories": ["Café", "Caliente", "Leche"],
+    "oldPrice": "$65",
+    "newPrice": "$55",
+    "saleTag": true,
+    "newTag": false
+  },
+  {
+    "id": 3,
+    "name": "Cold Brew Natural",
+    "description": "Café frío preparado en 12 horas para máximo sabor.",
+    "image": "/img/all-img/jose.jpg",
+    "categories": ["Café", "Frío"],
+    "oldPrice": null,
+    "newPrice": "$50",
+    "saleTag": false,
+    "newTag": true
+  },
+  {
+    "id": 4,
+    "name": "Latte Macchiato",
+    "description": "Latte con un toque de caramelo y espuma de leche perfecta.",
+    "image": "/img/all-img/jose.jpg",
+    "categories": ["Café", "Caliente", "Dulce"],
+    "oldPrice": null,
+    "newPrice": "$60",
+    "saleTag": false,
+    "newTag": false
+  }
+] 

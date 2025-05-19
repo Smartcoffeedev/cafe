@@ -69,9 +69,15 @@ Default CSS
   --whiteColor: #ffffff;
   --blackColor: #16171A;
   --LightBg: #fcfaf8;
-  --DarkBg: #05051E;
+  --DarkBg: #050d1a;
   --fontSize: 15px;
   --transition: .5s;
+}
+
+body,
+body.dark-theme,
+body.dark-theme-2 {
+  background-color: var(--DarkBg) !important;
 }
 
 body {
@@ -79,14 +85,6 @@ body {
   margin: 0;
   font-size: var(--fontSize);
   font-family: var(--fontFamily);
-}
-
-body.dark-theme {
-  background-color: var(--DarkBg);
-}
-
-body.dark-theme-2 {
-  background-color: var(--blackColor);
 }
 
 h1, .h1 {
@@ -149,6 +147,7 @@ h4, .h4 {
 
 /* SECCIONES PRINCIPALES DEL LANDING (hero, about, features, team, gallery, testimonial, etc.) */
 .hero-section, .about-section, .features-section, .features-section-2, .team-section, .gallery-section, .testimonial-section, .testimonial-section-2, .pricing-section, .work-section, .brand-section, .section-banner, .faq-section, .contact-section, .blog-section, .blog-section-2, .products-area, .portfolio-details, .projects-slider, .projects-section, .portfolio-container {
+  background-color: var(--DarkBg) !important;
   font-size: 0.23rem !important;
 }
 .hero-section h1, .about-section h1, .features-section h1, .team-section h1, .gallery-section h1, .testimonial-section h1, .pricing-section h1, .work-section h1, .brand-section h1, .section-banner h1, .faq-section h1, .contact-section h1, .blog-section h1, .products-area h1, .portfolio-details h1 {

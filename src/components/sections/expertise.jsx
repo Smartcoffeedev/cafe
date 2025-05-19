@@ -1,16 +1,16 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import Link from 'next/link';
+import { Link } from 'react-router-dom'
 
 const Expertise = () => {
-    const [services, setServices] = useState([]);
+    const [isVisible, setIsVisible] = useState(false)
+
     useEffect(() => {
-        fetch('/api/services')
-            .then(res => res.json())
-            .then(data => setServices((data.services || []).slice(0, 8)));
-    }, []);
+        setIsVisible(true)
+    }, [])
+
     return (
-        <div id="expertise" className="expertise-area ptb-100">
+        <div className={`expertise-section ${isVisible ? 'visible' : ''}`}>
             <div className="container">
                 <div className="section-title-2 style-3" data-animation="fade-up" data-delay={0.1}>
                     <div className="sub-title-3">
@@ -18,16 +18,34 @@ const Expertise = () => {
                     </div>
                     <h2>Nuestras características y servicios</h2>
                 </div>
-                <div className="expertise-grid">
-                    {services.map((service, index) => (
-                        <div key={service.id} className="expertise-card" data-animation="fade-up" data-delay={index * 0.1}>
-                            <div className="icon">
-                                <i className={`bx ${service.icon}`}></i>
-                            </div>
-                            <h3>{service.title}</h3>
-                            <p>{service.description}</p>
+                <div className="row">
+                    <div className="col-lg-6">
+                        <div className="expertise-content">
+                            <h2>Nuestra Experiencia</h2>
+                            <p>
+                                Más de 10 años creando soluciones tecnológicas innovadoras para el sector cafetero.
+                            </p>
+                            <Link to="/about" className="btn btn-primary">
+                                Conoce más
+                            </Link>
                         </div>
-                    ))}
+                    </div>
+                    <div className="col-lg-6">
+                        <div className="expertise-stats">
+                            <div className="stat-item">
+                                <h3>1000+</h3>
+                                <p>Cafeteras Vendidas</p>
+                            </div>
+                            <div className="stat-item">
+                                <h3>50+</h3>
+                                <p>Países</p>
+                            </div>
+                            <div className="stat-item">
+                                <h3>98%</h3>
+                                <p>Satisfacción</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <style jsx>{`

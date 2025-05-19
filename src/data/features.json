@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "icon": "bx-coffee",
+    "title": "Café & Gastronomía",
+    "description": "Un espacio para disfrutar de cafés de autor, comidas deliciosas y experiencias after office en un ambiente moderno y creativo."
+  },
+  {
+    "id": 2,
+    "icon": "bx-briefcase-alt",
+    "title": "Coworking & Asesorías",
+    "description": "Áreas de trabajo flexibles combinadas con asesoría profesional para emprendedores, freelancers y equipos en crecimiento."
+  },
+  {
+    "id": 3,
+    "icon": "bx-calendar-event",
+    "title": "Eventos & Networking",
+    "description": "Organización de charlas, talleres, lanzamientos y encuentros para conectar personas, ideas y oportunidades."
+  },
+  {
+    "id": 4,
+    "icon": "bx-broadcast",
+    "title": "Streaming & Producción Multimedia",
+    "description": "Estudios equipados para transmisiones en vivo, grabaciones, podcasts y creación de contenido audiovisual de alto nivel."
+  },
+  {
+    "id": 5,
+    "icon": "bx-joystick",
+    "title": "Gaming & Experiencias Digitales",
+    "description": "Zona interactiva con videojuegos, torneos, realidad aumentada y propuestas inmersivas para jugadores y creadores."
+  },
+  {
+    "id": 6,
+    "icon": "bx-bitcoin",
+    "title": "Web 3.0 & Tokenización",
+    "description": "Servicios y asesoría en tecnologías blockchain, criptoactivos y estrategias de tokenización para modelos de negocio del futuro."
+  },
+  {
+    "id": 7,
+    "icon": "bx-bulb",
+    "title": "Marketing & Creatividad Digital",
+    "description": "Estrategias de marca, campañas digitales, diseño y contenido que conectan con el público y potencian tu proyecto."
+  },
+  {
+    "id": 8,
+    "icon": "bx-code-alt",
+    "title": "Desarrollo Web & Soluciones Tech",
+    "description": "Creación de sitios, plataformas y herramientas digitales a medida, con un enfoque innovador y escalable."
+  }
+] 

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "question": "¿Cuál es el horario de atención?",
+    "answer": "Estamos abiertos de lunes a domingo de 7:00 AM a 10:00 PM"
+  },
+  {
+    "id": 2,
+    "question": "¿Ofrecen servicio a domicilio?",
+    "answer": "Sí, ofrecemos servicio de delivery en un radio de 5km"
+  },
+  {
+    "id": 3,
+    "question": "¿Tienen opciones sin cafeína?",
+    "answer": "Sí, ofrecemos una variedad de bebidas descafeinadas y téss"
+  },
+  {
+    "id": 4,
+    "question": "¿Aceptan tarjetas de crédito?",
+    "answer": "Sí, aceptamos todas las tarjetas de crédito y débito principales"
+  }
+]

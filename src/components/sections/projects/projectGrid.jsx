@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import { Link } from 'react-router-dom'
 import './projectCard.css'
 
 const ProjectGrid = ({ projects }) => {
@@ -11,12 +10,13 @@ const ProjectGrid = ({ projects }) => {
                 <div key={index} className="col-lg-4 col-md-6 col-sm-6">
                     <div className="project-card">
                         <div className="project-image-container">
-                            <Image
+                            <img
                                 src={project.image}
                                 alt={project.title}
                                 width={370}
                                 height={250}
                                 className="project-image"
+                                style={{objectFit: 'cover', borderRadius: '16px'}}
                             />
                             <div className="project-overlay">
                                 <div className="project-content">
@@ -26,7 +26,7 @@ const ProjectGrid = ({ projects }) => {
                                         ))}
                                     </div>
                                     <h3 className="project-title">
-                                        <Link href={`/portfolio/${project.id}`}>
+                                        <Link to={`/portfolio/${project.id}`}>
                                             {project.title}
                                         </Link>
                                     </h3>
@@ -35,7 +35,7 @@ const ProjectGrid = ({ projects }) => {
                                         <span className="client">{project.client}</span>
                                         <span className="date">{new Date(project.date).toLocaleDateString()}</span>
                                     </div>
-                                    <Link href={`/portfolio/${project.id}`} className="view-project-btn">
+                                    <Link to={`/portfolio/${project.id}`} className="view-project-btn">
                                         Ver Proyecto
                                         <i className="bx bx-right-arrow-alt"></i>
                                     </Link>

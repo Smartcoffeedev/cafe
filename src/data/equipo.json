@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ana Torres",
+    "rol": "Barista Principal",
+    "foto": "/img/all-img/1747316156393-858994221-Imagen-de-WhatsApp-2025-05-13-a-las-19.45.02-52d94807.jpg",
+    "bio": "Apasionada del café y la innovación, lidera el equipo de SmartCoffee."
+  },
+  {
+    "id": 2,
+    "nombre": "Luis Pérez",
+    "rol": "Desarrollador IA",
+    "foto": "/img/all-img/1747191542141-978052796-Imagen-de-WhatsApp-2025-05-13-a-las-19.45.02-52d94807.jpg",
+    "bio": "Especialista en inteligencia artificial aplicada al café."
+  }
+] 

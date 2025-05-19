@@ -1,8 +1,7 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import { getFooterData } from '@/utils/dataUtils'
 
 const Footer = () => {
@@ -12,7 +11,7 @@ const Footer = () => {
     <footer className="footer-area">
       <div className="footer-content">
         <div className="footer-logo">
-          <Image
+          <img
             src={'/img/all-img/logo/logotipo w.png'}
             alt="SmartCoffee Logo"
             width={150}
@@ -23,8 +22,8 @@ const Footer = () => {
         <p className="footer-desc">{footerData.description}</p>
         <div className="footer-contact">
           <span><i className="bx bx-map"></i> {footerData.contactInfo.address}</span>
-          <span><i className="bx bx-envelope"></i> <Link href={`mailto:${footerData.contactInfo.email}`}>{footerData.contactInfo.email}</Link></span>
-          <span><i className="bx bx-phone"></i> <Link href={`tel:${footerData.contactInfo.phone.replace(/\s+/g, '')}`}>{footerData.contactInfo.phone}</Link></span>
+          <span><i className="bx bx-envelope"></i> <a href={`mailto:${footerData.contactInfo.email}`}>{footerData.contactInfo.email}</a></span>
+          <span><i className="bx bx-phone"></i> <a href={`tel:${footerData.contactInfo.phone.replace(/\s+/g, '')}`}>{footerData.contactInfo.phone}</a></span>
         </div>
         <div className="footer-social">
           <a href={footerData.socialMedia.facebook} target="_blank" rel="noopener noreferrer"><i className="bx bxl-facebook"></i></a>

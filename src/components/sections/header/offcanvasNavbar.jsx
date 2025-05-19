@@ -1,12 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Link, useLocation } from 'react-router-dom';
 
 const ResponsiveNavbar = () => {
     const [navigationData, setNavigationData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const pathname = usePathname();
+    const location = useLocation();
 
     // Datos por defecto actualizados con las rutas correctas
     const defaultNavigation = [
@@ -20,31 +19,9 @@ const ResponsiveNavbar = () => {
     ];
 
     useEffect(() => {
-        fetchNavigationData();
+        setNavigationData(defaultNavigation);
+        setLoading(false);
     }, []);
-
-    const fetchNavigationData = async () => {
-        try {
-            const response = await fetch('/api/navigation');
-            const data = await response.json();
-            
-            if (data && data.navigation && Array.isArray(data.navigation)) {
-                setNavigationData(data.navigation);
-            } else if (data && data.navigationData && Array.isArray(data.navigationData)) {
-                setNavigationData(data.navigationData);
-            } else if (Array.isArray(data)) {
-                setNavigationData(data);
-            } else {
-                console.log('Using default navigation');
-                setNavigationData(defaultNavigation);
-            }
-        } catch (error) {
-            console.error('Error fetching navigation data:', error);
-            setNavigationData(defaultNavigation);
-        } finally {
-            setLoading(false);
-        }
-    };
 
     const checkIsActive = (item, pathname) => {
         if (item.href === '/') {
@@ -98,12 +75,11 @@ const ResponsiveNavbar = () => {
             <div className="offcanvas-body">
                 <div className="accordion" id="navbarAccordion">
                     {Array.isArray(navigationData) && navigationData.map((item, index) => {
-                        const isActive = checkIsActive(item, pathname);
-                        
+                        const isActive = checkIsActive(item, location.pathname);
                         return (
                             <div className="accordion-item" key={item.label || index}>
                                 <Link 
-                                    href={item.href} 
+                                    to={item.href} 
                                     className={`accordion-link without-icon ${isActive ? 'active' : ''}`}
                                     onClick={handleLinkClick}
                                 >

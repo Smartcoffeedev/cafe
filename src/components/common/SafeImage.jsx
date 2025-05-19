@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import Image from 'next/image';
-import { defaultImages } from '@/utils/imageUtils';
+import { defaultImages } from '../../utils/imageUtils';
 
 const SafeImage = ({ src, alt, width, height, className, fallbackType = 'default' }) => {
     const [imgSrc, setImgSrc] = useState(src);
@@ -15,16 +14,15 @@ const SafeImage = ({ src, alt, width, height, className, fallbackType = 'default
     };
 
     return (
-        <Image
+        <img
             src={imgSrc}
             alt={alt || 'Imagen'}
             width={width}
             height={height}
             className={className}
             onError={handleError}
-            priority={false}
             loading="lazy"
-            unoptimized={true}
+            style={{ objectFit: 'cover' }}
         />
     );
 };

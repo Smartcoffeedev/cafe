@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales personalizados */
+:root {
+  /* Colores principales */
+  --primary: #2563eb; /* Azul Tailwind 600 */
+  --primary-dark: #1d4ed8;
+  --primary-light: #3b82f6;
+  --primary-blue: #2563eb;
+
+  /* Colores del tema oscuro */
+  --bg-dark: #050d1a;
+  --bg-card: #1E1E1E;
+  --text-light: #FFFFFF;
+  --text-muted: #A0AEC0;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-custom text-light-custom;
+    background-color: var(--bg-dark) !important;
+  }
+}
+
+@layer components {
+  /* Botones */
+  .btn-custom {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold transition-colors duration-300;
+  }
+
+  .btn-outline-custom {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold transition-colors duration-300;
+  }
+
+  /* Tarjetas */
+  .card-custom {
+    @apply bg-card-custom border border-gray-800 shadow-lg;
+  }
+
+  /* Fondos */
+  .bg-dark-custom {
+    @apply bg-[var(--bg-dark)];
+    background-color: var(--bg-dark) !important;
+  }
+
+  .bg-card-custom {
+    @apply bg-[var(--bg-card)];
+  }
+
+  .bg-primary-blue {
+    background-color: var(--primary-blue);
+  }
+
+  /* Textos */
+  .text-light-custom {
+    @apply text-[var(--text-light)];
+  }
+
+  .text-muted-custom {
+    @apply text-[var(--text-muted)];
+  }
+
+  .text-primary {
+    @apply text-[var(--primary)];
+  }
+}
+
+/* Animaciones */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-custom;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 107, 107, 0.5);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Efectos hover */
+.hover-shadow-lg {
+  @apply hover:shadow-lg transition-shadow duration-300;
+}
+
+.hover-scale-110 {
+  @apply hover:scale-110 transition-transform duration-300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-light);
+  background-color: var(--bg-dark) !important;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+  opacity: 0.9;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utilidades */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Estilos para el header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--bg-dark);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(5px);
+}
+
+/* Estilos para el main */
+main {
+  padding-top: 80px;
+  background-color: var(--bg-dark) !important;
+}
+
+/* Estilos para el footer */
+footer {
+  background: var(--bg-card);
+  color: var(--text-light);
+  padding: 2rem 0;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  main {
+    padding-top: 60px;
+  }
+}
+
+/* Utilidades */
+.hover-scale-110:hover {
+  transform: scale(1.1);
+}
+
+.hover-shadow-lg:hover {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.5)!important;
+}
+
+.hover-w-100:hover {
+  width: 100% !important;
+}
+
+/* Transiciones */
+.transition {
+  transition: all 0.3s ease;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate__fadeInDown {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+.animate__fadeInUp {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Clases personalizadas para tema oscuro */
+.bg-dark-custom {
+  background-color: var(--bg-dark) !important;
+}
+
+.bg-card-custom {
+  background-color: var(--bg-card);
+}
+
+.text-light-custom {
+  color: var(--text-light);
+}
+
+.text-muted-custom {
+  color: var(--text-muted);
+}
+
+.card-custom {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-custom:hover {
+  background-color: var(--primary-dark);
+  opacity: 0.9;
+  color: var(--text-light);
+}
+
+.btn-outline-custom:hover {
+  background-color: var(--primary);
+  color: var(--bg-dark);
+} 

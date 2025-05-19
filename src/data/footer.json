@@ -1,0 +1,22 @@
+{
+  "companyInfo": {
+    "name": "Smart Coffee",
+    "description": "El mejor café de la ciudad.",
+    "address": "Calle Principal 123, Ciudad",
+    "phone": "+52 123 456 7890",
+    "email": "info@smartcoffee.com"
+  },
+  "quickLinks": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Productos", "href": "/productos" },
+    { "label": "Contacto", "href": "/contacto" }
+  ],
+  "socialLinks": [
+    { "label": "Facebook", "href": "https://facebook.com/smartcoffee" },
+    { "label": "Instagram", "href": "https://instagram.com/smartcoffee" }
+  ],
+  "newsletter": {
+    "title": "Suscríbete a nuestro boletín",
+    "description": "Recibe noticias y promociones exclusivas."
+  }
+} 

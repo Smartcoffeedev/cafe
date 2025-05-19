@@ -1,9 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from "motion/react"
-import { PhotoProvider, PhotoView } from 'react-photo-view';
-import SafeImage from '@/components/common/SafeImage';
-import { getGallery, getGalleryByCategory } from '@/utils/dataUtils';
+import { motion, AnimatePresence } from "framer-motion"
+import SafeImage from '../common/SafeImage';
+import galleryData from '../../data/galleryItemsData.json';
 import GalleryItem from './gallery/GalleryItem';
 
 const itemVariants = {
@@ -12,158 +11,79 @@ const itemVariants = {
   hidden: { opacity: 0, scale: 0.8 },
 };
 
-const ImageGallery = ({ className, isTitleShow }) => {
-  const [activeFilter, setActiveFilter] = useState('all');
-  const [galleryData, setGalleryData] = useState([]);
-  const [categories, setCategories] = useState([]);
+const categories = ['Todos', ...Array.from(new Set(galleryData.map(item => item.category)))];
+
+const EXAMPLE_IMG = '/img/all-img/jose.jpg';
+
+const ImageGallery = () => {
+  const [active, setActive] = useState('Todos');
+  const filtered = (active === 'Todos' ? galleryData : galleryData.filter(item => item.category === active))
+    .slice(0, 12)
+    .map(item => ({ ...item, src: EXAMPLE_IMG }));
+  const [gallery, setGallery] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImg, setModalImg] = useState(null);
 
   useEffect(() => {
-    const fetchGallery = async () => {
-      try {
-        const res = await fetch('/api/gallery');
-        const data = await res.json();
-        setGalleryData(data.galleryItemsData || []);
-        setCategories(data.categories || []);
-      } catch {
-        setGalleryData([]);
-        setCategories([]);
-      }
-    };
-    fetchGallery();
+    setGallery(galleryData);
   }, []);
 
-  const filteredItems = activeFilter === 'all'
-    ? galleryData.slice(0, 12)
-    : galleryData.filter(item => item.category === activeFilter).slice(0, 12);
+  const openModal = (img) => {
+    setModalImg(img);
+    setModalOpen(true);
+  };
 
-  const handleFilterChange = (newFilter) => {
-    setActiveFilter(newFilter);
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImg(null);
   };
 
   return (
-    <div className={`gallery-section ${className}`}>
-      <div className="container">
-        {isTitleShow && (
-          <div className="section-title text-center mb-5">
-            <h2>Nuestra Galería</h2>
-            <p className="text-muted">Descubre los momentos especiales de nuestro café</p>
-          </div>
-        )}
-        <div className="gallery-filters">
-          <button
-            className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`}
-            onClick={() => handleFilterChange('all')}
-          >
-            Todos
-          </button>
-          {categories.map((category) => (
+    <section className="w-full min-h-screen flex flex-col justify-center bg-[#050d1a]">
+      <div className="max-w-6xl mx-auto px-4 w-full flex flex-col flex-1 justify-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white text-center mb-2 mt-8">Nuestra Galería</h2>
+        <p className="text-lg text-white/80 text-center mb-8">Descubre los momentos especiales de nuestro café</p>
+        <div className="flex flex-wrap justify-start gap-4 mb-8">
+          {categories.map(cat => (
             <button
-              key={category}
-              className={`filter-btn ${activeFilter === category ? 'active' : ''}`}
-              onClick={() => handleFilterChange(category)}
+              key={cat}
+              onClick={() => setActive(cat)}
+              className={`px-6 py-2 rounded-lg font-semibold text-base transition-colors duration-200 ${active === cat ? 'bg-primary text-white' : 'bg-[#23263a] text-white/80 hover:bg-primary/80'}`}
             >
-              {category}
+              {cat}
             </button>
           ))}
         </div>
-        <div className="item-grid">
-          {filteredItems.map((item) => (
-            <GalleryItem key={item.id} item={item} />
-          ))}
+        <div className="flex-1 flex items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            {filtered.map(item => (
+              <div key={item.id} className="w-full aspect-square overflow-hidden rounded-xl bg-[#181f2a] flex items-center justify-center">
+                <img
+                  src={item.src}
+                  alt={item.title}
+                  className="object-cover w-full h-full aspect-square"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      <style jsx>{`
-        .gallery-section {
-          background: #0a0a1a;
-          padding: 0;
-          margin: 0;
-        }
-        .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 1.5rem;
-          width: 100%;
-        }
-        .section-title {
-          padding: 2rem 0 1.5rem 0;
-        }
-        .section-title p {
-          color: #fff !important;
-        }
-        .gallery-filters {
-          display: flex;
-          gap: 1rem;
-          margin-bottom: 2.5rem;
-        }
-        .filter-btn {
-          background: #18192a;
-          color: #bdbdbd;
-          border: none;
-          border-radius: 0.5rem;
-          padding: 0.5rem 1.5rem;
-          font-size: 1rem;
-          font-weight: 500;
-          cursor: pointer;
-          transition: background 0.2s, color 0.2s;
-          outline: none;
-        }
-        .filter-btn.active, .filter-btn:hover {
-          background: #2563eb;
-          color: #fff;
-        }
-        .item-grid {
-          display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          column-gap: 1.2rem;
-          row-gap: 0;
-          margin-top: 40px;
-          box-sizing: border-box;
-          width: 100%;
-        }
-        .gallery-item {
-          background: #18192a;
-          overflow: hidden;
-          box-shadow: 0 2px 16px rgba(37,99,235,0.07);
-          transition: transform 0.2s, box-shadow 0.2s;
-          aspect-ratio: 1/1;
-          width: 100%;
-          box-sizing: border-box;
-        }
-        .gallery-item:hover {
-          transform: scale(1.04);
-          box-shadow: 0 8px 32px rgba(37,99,235,0.18);
-        }
-        .gallery-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-          border-radius: 0;
-          transition: filter 0.2s;
-        }
-        @media (max-width: 1100px) {
-          .item-grid {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-          }
-        }
-        @media (max-width: 600px) {
-          .item-grid {
-            grid-template-columns: 1fr;
-            gap: 0;
-            justify-items: center;
-          }
-          .gallery-item {
-            grid-column: auto;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-          }
-          .gallery-img {
-            height: 100%;
-          }
-        }
-      `}</style>
-    </div>
+      {/* Modal */}
+      {modalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" onClick={closeModal}>
+          <div className="relative max-w-3xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
+            <button
+              className="absolute top-2 right-2 text-white text-3xl font-bold bg-black bg-opacity-50 rounded-full px-3 py-1 hover:bg-opacity-80 transition"
+              onClick={closeModal}
+              aria-label="Cerrar"
+            >
+              &times;
+            </button>
+            <img src={modalImg} alt="Vista ampliada" className="rounded-lg max-h-[80vh] w-auto object-contain" />
+          </div>
+        </div>
+      )}
+    </section>
   )
 }
 

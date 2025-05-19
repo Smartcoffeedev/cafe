@@ -2,58 +2,94 @@
   "projects": [
     {
       "id": 1,
-      "title": "Renovación de Cafetería Principal",
-      "description": "Modernización completa de nuestra cafetería principal con nuevo diseño y equipamiento.",
-      "category": "Algo",
-      "image": "/uploads/1747409918870-995863502-26.png",
-      "date": "2024-03-15",
-      "benefits": [
-        "pilates"
-      ],
+      "title": "Proyecto Blockchain",
+      "description": "Plataforma de trazabilidad de café usando tecnología blockchain para garantizar el origen y la calidad.",
+      "image": "/img/all-img/jose.jpg",
+      "benefits": ["Transparencia", "Seguridad"],
+      "category": "tecnología",
+      "date": "2025-05-15",
       "featured": true,
-      "link": "https://www.hola.com"
+      "link": "https://blockchain-coffee.com"
     },
     {
       "id": 2,
-      "title": "Expansión a Nuevo Local",
-      "description": "Apertura de nueva sucursal en zona residencial con concepto innovador.",
-      "category": "Algo",
-      "image": "/uploads/1745487615621.png",
-      "date": "2024-02-01",
-      "benefits": [],
+      "title": "App de Pedidos",
+      "description": "Aplicación móvil para realizar pedidos y reservas en SmartCoffee de forma rápida y sencilla.",
+      "image": "/img/all-img/jose.jpg",
+      "benefits": ["Comodidad", "Rapidez"],
+      "category": "app",
+      "date": "2025-05-10",
       "featured": false,
-      "link": "https://www.hola.com"
+      "link": "https://app.smartcoffee.com"
     },
     {
       "id": 3,
-      "title": "Implementación de Sistema de Pedidos Online",
-      "description": "Desarrollo e implementación de plataforma digital para pedidos y reservas.",
-      "category": "awdawd",
-      "image": "/uploads/1745487615621.png",
-      "date": "2024-01-10",
-      "benefits": [],
+      "title": "Programa de Recompensas",
+      "description": "Sistema de puntos y recompensas para clientes frecuentes, canjeables por productos y descuentos.",
+      "image": "/img/all-img/jose.jpg",
+      "benefits": ["Fidelización", "Beneficios"],
+      "category": "marketing",
+      "date": "2025-04-20",
       "featured": false,
-      "link": "https://www.hola.com"
+      "link": "https://recompensas.smartcoffee.com"
     },
     {
       "id": 4,
-      "title": "awfdwa",
-      "description": "awfwaf",
-      "image": "/uploads/1747410970604-655604430-24.png",
-      "benefits": [
-        "awdawd"
-      ],
-      "category": "awdawd",
-      "date": "2025-05-16",
+      "title": "Café Sustentable",
+      "description": "Proyecto de producción y consumo responsable de café, apoyando a productores locales.",
+      "image": "/img/all-img/jose.jpg",
+      "benefits": ["Sustentabilidad", "Impacto social"],
+      "category": "sustentabilidad",
+      "date": "2025-03-15",
       "featured": false,
-      "link": "https://www.hola.com"
+      "link": "https://sustentable.smartcoffee.com"
+    },
+    {
+      "id": 5,
+      "title": "Eventos y Charlas",
+      "description": "Organización de eventos, charlas y workshops sobre tecnología, café y networking.",
+      "image": "/img/all-img/jose.jpg",
+      "benefits": ["Comunidad", "Aprendizaje"],
+      "category": "eventos",
+      "date": "2025-02-10",
+      "featured": false,
+      "link": "https://eventos.smartcoffee.com"
+    },
+    {
+      "id": 6,
+      "title": "Galería de Arte Digital",
+      "description": "Espacio para exhibición de arte digital y NFT de artistas locales e internacionales.",
+      "image": "/img/all-img/jose.jpg",
+      "benefits": ["Arte", "Innovación"],
+      "category": "arte",
+      "date": "2025-01-25",
+      "featured": false,
+      "link": "https://arte.smartcoffee.com"
+    },
+    {
+      "id": 7,
+      "title": "Coworking Inteligente",
+      "description": "Zona de coworking equipada con tecnología de punta y servicios para emprendedores.",
+      "image": "/img/all-img/jose.jpg",
+      "benefits": ["Productividad", "Networking"],
+      "category": "coworking",
+      "date": "2025-01-10",
+      "featured": false,
+      "link": "https://coworking.smartcoffee.com"
+    },
+    {
+      "id": 8,
+      "title": "Tienda Online",
+      "description": "E-commerce para comprar café, accesorios y productos exclusivos de SmartCoffee.",
+      "image": "/img/all-img/jose.jpg",
+      "benefits": ["Comodidad", "Exclusividad"],
+      "category": "ecommerce",
+      "date": "2024-12-20",
+      "featured": false,
+      "link": "https://tienda.smartcoffee.com"
     }
   ],
   "categories": [
-    "renovacion",
-    "expansion",
-    "tecnologia",
-    "awdawd",
-    "Algo"
+    "tecnología", "app", "marketing", "sustentabilidad", "eventos", "arte", "coworking", "ecommerce"
   ]
 }

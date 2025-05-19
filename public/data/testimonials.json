@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Juan Pérez",
+    "role": "Cliente Regular",
+    "content": "Excelente servicio y café de calidad. El ambiente es muy acogedor. Siempre encuentro un espacio tranquilo para leer o trabajar, y el personal es muy atento."
+  },
+  {
+    "id": 2,
+    "name": "María García",
+    "role": "Cliente VIP",
+    "content": "El mejor café que he probado. El personal es muy amable y profesional. Me encanta venir con amigos y disfrutar de la variedad de postres."
+  },
+  {
+    "id": 3,
+    "name": "Carlos Ruiz",
+    "role": "Cliente Frecuente",
+    "content": "Un lugar perfecto para trabajar y disfrutar de un buen café. La conexión WiFi es excelente y el ambiente inspira creatividad."
+  },
+  {
+    "id": 4,
+    "name": "Lucía Fernández",
+    "role": "Emprendedora",
+    "content": "Me encanta la decoración y la música ambiental. Es mi lugar favorito para reuniones de trabajo y networking."
+  },
+  {
+    "id": 5,
+    "name": "Pedro Gómez",
+    "role": "Estudiante",
+    "content": "Siempre encuentro un rincón cómodo para estudiar. El café es delicioso y los precios son accesibles."
+  },
+  {
+    "id": 6,
+    "name": "Ana Torres",
+    "role": "Diseñadora Gráfica",
+    "content": "El espacio es muy inspirador y el trato del personal es inmejorable. Recomiendo los capuccinos y las tartas."
+  },
+  {
+    "id": 7,
+    "name": "Miguel Ángel",
+    "role": "Freelancer",
+    "content": "Un ambiente relajado y profesional. Ideal para trabajar solo o en equipo. El café de especialidad es mi favorito."
+  },
+  {
+    "id": 8,
+    "name": "Sofía López",
+    "role": "Artista",
+    "content": "Me encanta exponer mis obras aquí. El público es muy receptivo y el staff siempre apoya a los artistas locales."
+  },
+  {
+    "id": 9,
+    "name": "David Castillo",
+    "role": "Programador",
+    "content": "El mejor lugar para codear fuera de casa. Buena iluminación, enchufes y excelente café."
+  },
+  {
+    "id": 10,
+    "name": "Valeria Mendoza",
+    "role": "Community Manager",
+    "content": "Las redes sociales del café siempre están actualizadas y las promociones son geniales. Me encanta la comunidad que se ha formado aquí."
+  }
+] 

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import SafeImage from '@/components/common/SafeImage';
+import SafeImage from '../../common/SafeImage';
 
 const GalleryItem = ({ item }) => {
     return (

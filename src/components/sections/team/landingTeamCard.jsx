@@ -1,19 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+// import Link from 'next/link';
+// import Image from 'next/image';
 
 const LandingTeamCard = ({ member }) => {
     return (
         <div className="card">
             <div className="photo">
-                <Image 
+                <img 
                     src={member.image} 
                     alt={member.name}
-                    width={400}
-                    height={400}
+                    width={120}
+                    height={120}
                     style={{
                         objectFit: 'cover',
-                        borderRadius: '16px'
+                        borderRadius: '16px',
+                        width: '100%',
+                        height: '100%'
                     }}
                 />
             </div>
@@ -85,12 +87,10 @@ const LandingTeamCard = ({ member }) => {
                     justify-content: flex-start;
                     position: relative;
                 }
-
                 .card:hover {
                     box-shadow: 0 8px 32px rgba(37,99,235,0.18);
                     transform: translateY(-6px) scale(1.03);
                 }
-
                 .photo {
                     width: 120px;
                     height: 120px;
@@ -103,7 +103,6 @@ const LandingTeamCard = ({ member }) => {
                     align-items: center;
                     justify-content: center;
                 }
-
                 .info {
                     padding: 0;
                     display: flex;
@@ -113,7 +112,6 @@ const LandingTeamCard = ({ member }) => {
                     width: 100%;
                     flex: 1 1 auto;
                 }
-
                 .info h5 {
                     color: #fff;
                     font-size: 0.72rem;
@@ -124,14 +122,12 @@ const LandingTeamCard = ({ member }) => {
                     text-transform: capitalize;
                     word-break: break-word;
                 }
-
                 .info p {
                     color: #43e97b;
                     font-size: 0.78rem;
                     margin: 0 0 0.18rem 0;
                     font-weight: 400;
                 }
-
                 .social {
                     display: flex;
                     justify-content: center;
@@ -142,7 +138,6 @@ const LandingTeamCard = ({ member }) => {
                     right: 0;
                     bottom: 1rem;
                 }
-
                 .social-button {
                     color: #fff;
                     font-size: 1rem;
@@ -155,7 +150,6 @@ const LandingTeamCard = ({ member }) => {
                     border-radius: 50%;
                     background: rgba(37,99,235,0.08);
                 }
-
                 .social-button:hover {
                     background: #2563eb;
                     color: #fff;
@@ -165,4 +159,4 @@ const LandingTeamCard = ({ member }) => {
     );
 };
 
-export default LandingTeamCard; 
+export default LandingTeamCard;

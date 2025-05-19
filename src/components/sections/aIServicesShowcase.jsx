@@ -1,11 +1,12 @@
 import React from 'react'
-import Link from 'next/link';
-import Image from 'next/image';
+import { Link } from 'react-router-dom'
+
 const portfolioItems = [
     { title: "Bird Art", image: "/img/all-img/protfolio1.jpg" },
     { title: "Brave Man", image: "/img/all-img/protfolio2.jpg" },
     { title: "Dragon Fire", image: "/img/all-img/protfolio3.jpg" },
 ];
+
 const AIServicesShowcase = () => {
     return (
         <section className="work-section pt-100">
@@ -29,11 +30,11 @@ const AIServicesShowcase = () => {
                         <div key={index} className="col-lg-4 col-md-6">
                             <div className="work-box" data-animation="fade-up" data-aos-offset={(index + 1) * 100}>
                                 <div className="image">
-                                    <Link href={"/services-details"}>
-                                        <Image width={416} height={518} sizes='100vw' src={item.image} alt={item.title} />
+                                    <Link to="/services-details">
+                                        <img width={416} height={518} src={item.image} alt={item.title} style={{width: '100%', height: 'auto'}} />
                                     </Link>
                                 </div>
-                                <Link className="content3" href={"/services-details"}>
+                                <Link className="content3" to="/services-details">
                                     <h3>{item.title}</h3>
                                     <i className="bx bx-arrow-back bx-rotate-180" />
                                 </Link>
@@ -43,7 +44,6 @@ const AIServicesShowcase = () => {
                 </div>
             </div>
         </section>
-
     )
 }
 

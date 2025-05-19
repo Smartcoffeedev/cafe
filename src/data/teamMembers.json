@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Juan Pérez",
+    "position": "CEO",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Fundador y CEO de Smart Coffee con más de 10 años de experiencia en la industria del café.",
+    "instagram": "https://instagram.com/juanperez",
+    "linkedin": "https://linkedin.com/in/juanperez",
+    "tiktok": "https://tiktok.com/@juanperez",
+    "youtube": "https://youtube.com/@juanperez"
+  },
+  {
+    "id": 2,
+    "name": "María García",
+    "position": "CTO",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Directora de Tecnología, especialista en innovación y desarrollo de productos.",
+    "instagram": "https://instagram.com/mariagarcia",
+    "linkedin": "https://linkedin.com/in/mariagarcia",
+    "tiktok": "",
+    "youtube": "https://youtube.com/@mariagarcia"
+  },
+  {
+    "id": 3,
+    "name": "Carlos Hernández",
+    "position": "Chef Barista",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Maestro tostador con experiencia internacional en cafés de especialidad.",
+    "instagram": "",
+    "linkedin": "https://linkedin.com/in/carloshernandez",
+    "tiktok": "https://tiktok.com/@carloshernandez",
+    "youtube": ""
+  },
+  {
+    "id": 4,
+    "name": "Lucía Torres",
+    "position": "Marketing Digital",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Estratega digital enfocada en el crecimiento de marcas innovadoras.",
+    "instagram": "https://instagram.com/luciatorres",
+    "linkedin": "",
+    "tiktok": "https://tiktok.com/@luciatorres",
+    "youtube": ""
+  },
+  {
+    "id": 5,
+    "name": "Santiago López",
+    "position": "Desarrollador Web",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Desarrollador full stack apasionado por la tecnología y la automatización.",
+    "instagram": "",
+    "linkedin": "https://linkedin.com/in/santiagolopez",
+    "tiktok": "",
+    "youtube": "https://youtube.com/@santiagolopez"
+  },
+  {
+    "id": 6,
+    "name": "Valentina Ruiz",
+    "position": "Atención al Cliente",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Especialista en experiencia del cliente y gestión de eventos.",
+    "instagram": "https://instagram.com/valentinaruiz",
+    "linkedin": "",
+    "tiktok": "",
+    "youtube": ""
+  }
+] 

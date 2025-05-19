@@ -1,6 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react'
+import { Link } from 'react-router-dom'
 const instagramImages = [
     "/img/all-img/insta-1.png",
     "/img/all-img/insta-5.png",
@@ -18,8 +17,8 @@ const InstagramGallery = ({className}) => {
                     {instagramImages.map((imgSrc, index) => (
                         <div key={index} className="col-lg-2 col-sm-4 col-6">
                             <div className="insta-image">
-                                <Link href="#">
-                                    <Image width={250} height={220} sizes='100vw' src={imgSrc} alt={`Instagram ${index + 1}`} />
+                                <Link to="#">
+                                    <img width={250} height={220} src={imgSrc} alt={`Instagram ${index + 1}`} />
                                     <i className="bx bxl-instagram" />
                                 </Link>
                             </div>
@@ -28,7 +27,6 @@ const InstagramGallery = ({className}) => {
                 </div>
             </div>
         </div>
-
     )
 }
 
