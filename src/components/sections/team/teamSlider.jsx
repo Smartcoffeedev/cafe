@@ -4,13 +4,15 @@ import LandingTeamCard from './landingTeamCard'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
-import teamMembers from '../../../data/teamMembers.json';
 
 const TeamSlider = () => {
-  const [team, setTeam] = useState([]);
+  const [teamMembers, setTeamMembers] = useState([]);
 
   useEffect(() => {
-    setTeam(teamMembers);
+    fetch('http://localhost:3001/api/data/teamMembers.json')
+      .then(res => res.json())
+      .then(data => setTeamMembers(data))
+      .catch(() => setTeamMembers([]));
   }, []);
 
   return (
@@ -39,7 +41,7 @@ const TeamSlider = () => {
             loop
             data-animation="fade-zoom-in" data-delay={0.2}
           >
-            {team.map((member) => (
+            {teamMembers.map((member) => (
               <SwiperSlide key={member.id}>
                 <LandingTeamCard member={member} />
               </SwiperSlide>

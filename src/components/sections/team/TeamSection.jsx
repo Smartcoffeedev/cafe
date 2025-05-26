@@ -1,9 +1,9 @@
-import React from 'react';
-import team from '../../../data/teamMembers.json';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import teamData from '../../../data/team.json';
 
 const socialIcons = {
   instagram: { icon: 'bxl-instagram' },
@@ -13,6 +13,8 @@ const socialIcons = {
 };
 
 const TeamSection = () => {
+  const team = teamData;
+
   return (
     <section className="w-full py-16 md:py-24 bg-[#050d1a]">
       <div className="flex justify-center">
@@ -37,7 +39,7 @@ const TeamSection = () => {
               <SwiperSlide key={member.id}>
                 <div className="flex flex-col items-center bg-[#181f2a] rounded-2xl shadow-lg py-8 px-4 text-center border border-[#23263a] w-full max-w-xs mx-auto min-h-[320px]">
                   <img
-                    src={member.image}
+                    src={member.image ? member.image : '/img/all-img/jose.jpg'}
                     alt={member.name}
                     className="w-20 h-20 object-cover rounded-full mb-4 border-4 border-[#23263a] bg-[#23263a]"
                   />

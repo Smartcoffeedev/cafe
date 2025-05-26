@@ -11,7 +11,7 @@ const Landing = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="mt-24">
         <Hero />
         <About />
         <Services />

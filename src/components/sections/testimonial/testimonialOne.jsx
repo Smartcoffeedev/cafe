@@ -1,44 +1,18 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import SafeImage from '@/components/common/SafeImage';
-
-const MAX_VISIBLE_CHARS = 180;
+import testimonialsData from '@/data/testimonials.json';
 
 const TestimonialOne = () => {
-  const [testimonials, setTestimonials] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [expanded, setExpanded] = useState({});
   const [hoveredId, setHoveredId] = useState(null);
-
-  useEffect(() => {
-    const fetchTestimonials = async () => {
-      try {
-        setError(null);
-        const res = await fetch('/data/testimonials.json');
-        if (!res.ok) throw new Error('No se pudo cargar los testimonios');
-        const data = await res.json();
-        setTestimonials(data);
-      } catch (err) {
-        setError('No se pudo cargar los testimonios');
-        setTestimonials([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchTestimonials();
-  }, []);
 
   const handleToggleExpand = (id) => {
     setExpanded(prev => ({ ...prev, [id]: !prev[id] }));
   };
-
-  if (loading) return <div>Cargando testimonios...</div>;
-  if (error) return <div>Error al cargar testimonios: {error}</div>;
 
   return (
     <section className="w-full min-h-screen flex flex-col justify-center items-center bg-[#050d1a] py-12" style={{ minHeight: '100vh' }}>
@@ -73,7 +47,7 @@ const TestimonialOne = () => {
             }}
             className="w-full"
           >
-            {testimonials.map((testimonial) => {
+            {testimonialsData.map((testimonial) => {
               return (
                 <SwiperSlide key={testimonial.id}>
                   <div
@@ -135,7 +109,7 @@ const TestimonialOne = () => {
                           whiteSpace: 'pre-line',
                         }}
                       >
-                        {`"${testimonial.content}"`}
+                        {testimonial.testimonio}
                       </p>
                     </div>
                     <div className="testimonial-author-ui" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>

@@ -2,6 +2,34 @@
   "projects": [
     {
       "id": 1,
+      "title": "Café de Origen",
+      "description": "Proyecto de café de origen único de Colombia, con notas de frutas tropicales y chocolate.",
+      "image": "/img/all-img/jose.jpg",
+      "link": "/proyectos/cafe-origen"
+    },
+    {
+      "id": 2,
+      "title": "Tostado Artesanal",
+      "description": "Nuestro proceso de tostado artesanal que resalta los sabores únicos de cada grano.",
+      "image": "/img/all-img/jose.jpg",
+      "link": "/proyectos/tostado-artesanal"
+    },
+    {
+      "id": 3,
+      "title": "Escuela de Baristas",
+      "description": "Programa de formación profesional para baristas con certificación internacional.",
+      "image": "/img/all-img/jose.jpg",
+      "link": "/proyectos/escuela-baristas"
+    },
+    {
+      "id": 4,
+      "title": "Café Sostenible",
+      "description": "Iniciativa de café sostenible con agricultores locales y prácticas eco-amigables.",
+      "image": "/img/all-img/jose.jpg",
+      "link": "/proyectos/cafe-sostenible"
+    },
+    {
+      "id": 5,
       "title": "Proyecto Blockchain",
       "description": "Plataforma de trazabilidad de café usando tecnología blockchain para garantizar el origen y la calidad.",
       "image": "/img/all-img/jose.jpg",
@@ -12,7 +40,7 @@
       "link": "https://blockchain-coffee.com"
     },
     {
-      "id": 2,
+      "id": 6,
       "title": "App de Pedidos",
       "description": "Aplicación móvil para realizar pedidos y reservas en SmartCoffee de forma rápida y sencilla.",
       "image": "/img/all-img/jose.jpg",
@@ -23,7 +51,7 @@
       "link": "https://app.smartcoffee.com"
     },
     {
-      "id": 3,
+      "id": 7,
       "title": "Programa de Recompensas",
       "description": "Sistema de puntos y recompensas para clientes frecuentes, canjeables por productos y descuentos.",
       "image": "/img/all-img/jose.jpg",
@@ -34,7 +62,7 @@
       "link": "https://recompensas.smartcoffee.com"
     },
     {
-      "id": 4,
+      "id": 8,
       "title": "Café Sustentable",
       "description": "Proyecto de producción y consumo responsable de café, apoyando a productores locales.",
       "image": "/img/all-img/jose.jpg",
@@ -45,7 +73,7 @@
       "link": "https://sustentable.smartcoffee.com"
     },
     {
-      "id": 5,
+      "id": 9,
       "title": "Eventos y Charlas",
       "description": "Organización de eventos, charlas y workshops sobre tecnología, café y networking.",
       "image": "/img/all-img/jose.jpg",
@@ -56,7 +84,7 @@
       "link": "https://eventos.smartcoffee.com"
     },
     {
-      "id": 6,
+      "id": 10,
       "title": "Galería de Arte Digital",
       "description": "Espacio para exhibición de arte digital y NFT de artistas locales e internacionales.",
       "image": "/img/all-img/jose.jpg",
@@ -67,7 +95,7 @@
       "link": "https://arte.smartcoffee.com"
     },
     {
-      "id": 7,
+      "id": 11,
       "title": "Coworking Inteligente",
       "description": "Zona de coworking equipada con tecnología de punta y servicios para emprendedores.",
       "image": "/img/all-img/jose.jpg",
@@ -78,7 +106,7 @@
       "link": "https://coworking.smartcoffee.com"
     },
     {
-      "id": 8,
+      "id": 12,
       "title": "Tienda Online",
       "description": "E-commerce para comprar café, accesorios y productos exclusivos de SmartCoffee.",
       "image": "/img/all-img/jose.jpg",

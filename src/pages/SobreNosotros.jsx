@@ -5,7 +5,7 @@ import About from '../components/sections/About';
 const SobreNosotros = () => (
   <>
     <Navbar />
-    <main className="min-h-screen bg-dark-custom text-light-custom flex flex-col items-center py-12">
+    <main className="min-h-screen bg-dark-custom text-light-custom flex flex-col items-center py-12 mt-24">
       <About />
     </main>
     <Footer />

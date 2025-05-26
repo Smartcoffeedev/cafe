@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿Qué hace especial a SmartCoffee?",
+    "respuesta": "En SmartCoffee nos especializamos en café de origen único y tostado artesanal. Nuestro proceso de selección y tostado resalta los sabores únicos de cada grano, ofreciendo una experiencia de café excepcional."
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Ofrecen cursos de barista?",
+    "respuesta": "Sí, ofrecemos cursos de barista para todos los niveles, desde principiantes hasta profesionales. Nuestros cursos incluyen teoría, práctica y certificación."
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Puedo comprar café en grano?",
+    "respuesta": "Sí, ofrecemos una amplia selección de granos de café de diferentes orígenes y perfiles de tostado. Puedes comprarlos en nuestra tienda física o en línea."
+  },
+  {
+    "id": 4,
+    "pregunta": "¿Realizan envíos a domicilio?",
+    "respuesta": "Sí, realizamos envíos a toda la ciudad. También ofrecemos suscripciones mensuales para que recibas tu café favorito en casa."
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Tienen opciones para personas con restricciones dietéticas?",
+    "respuesta": "Sí, ofrecemos opciones de leche vegetal (almendra, soya, avena) y endulzantes alternativos. Todos nuestros productos están claramente etiquetados con información nutricional."
+  }
+] 

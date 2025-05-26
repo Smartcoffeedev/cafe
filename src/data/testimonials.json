@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "name": "Juan Pérez",
+    "name": "Laura Sánchez",
     "role": "Cliente Regular",
-    "content": "Excelente servicio y café de calidad. El ambiente es muy acogedor.",
+    "testimonio": "El mejor café que he probado. La atención y el ambiente son increíbles. Me encanta venir cada mañana a disfrutar de mi café favorito.",
     "image": "/img/all-img/jose.jpg"
   },
   {
     "id": 2,
-    "name": "María García",
-    "role": "Cliente VIP",
-    "content": "El mejor café que he probado. El personal es muy amable y profesional.",
+    "name": "Roberto Martínez",
+    "role": "Barista Profesional",
+    "testimonio": "Como barista, aprecio mucho la calidad de sus granos y el proceso de tostado. SmartCoffee ha elevado mis estándares de calidad.",
     "image": "/img/all-img/jose.jpg"
   },
   {
     "id": 3,
-    "name": "Carlos Ruiz",
-    "role": "Cliente Frecuente",
-    "content": "Un lugar perfecto para trabajar y disfrutar de un buen café.",
+    "name": "Carmen López",
+    "role": "Dueña de Cafetería",
+    "testimonio": "SmartCoffee nos ha ayudado a mejorar significativamente la calidad de nuestro café. Su asesoramiento ha sido invaluable.",
     "image": "/img/all-img/jose.jpg"
   }
 ] 

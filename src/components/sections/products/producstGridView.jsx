@@ -224,8 +224,10 @@ const ProducstGridView = () => {
         fetch('/api/products')
             .then(res => res.json())
             .then(data => {
-                setProducts(data.products || []);
-                setCategories(data.categories || []);
+                setProducts(data || []);
+                // Extraer categorías únicas de los productos
+                const uniqueCategories = [...new Set(data.flatMap(p => p.categories || []))];
+                setCategories(uniqueCategories);
             });
     }, []);
 

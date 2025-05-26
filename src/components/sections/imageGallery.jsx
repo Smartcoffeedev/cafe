@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import SafeImage from '../common/SafeImage';
-import galleryData from '../../data/galleryItemsData.json';
 import GalleryItem from './gallery/GalleryItem';
+import galleryData from '../../data/gallery.json';
 
 const itemVariants = {
   initial: { opacity: 0, scale: 0.8 },
@@ -11,22 +11,15 @@ const itemVariants = {
   hidden: { opacity: 0, scale: 0.8 },
 };
 
-const categories = ['Todos', ...Array.from(new Set(galleryData.map(item => item.category)))];
-
-const EXAMPLE_IMG = '/img/all-img/jose.jpg';
-
 const ImageGallery = () => {
   const [active, setActive] = useState('Todos');
-  const filtered = (active === 'Todos' ? galleryData : galleryData.filter(item => item.category === active))
-    .slice(0, 12)
-    .map(item => ({ ...item, src: EXAMPLE_IMG }));
-  const [gallery, setGallery] = useState([]);
+  const [filtered, setFiltered] = useState(galleryData.slice(0, 12));
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImg, setModalImg] = useState(null);
 
-  useEffect(() => {
-    setGallery(galleryData);
-  }, []);
+  const categories = ['Todos', ...Array.from(new Set(galleryData.map(item => item.category)))]
+
+  const EXAMPLE_IMG = '/img/all-img/jose.jpg';
 
   const openModal = (img) => {
     setModalImg(img);
@@ -59,7 +52,7 @@ const ImageGallery = () => {
             {filtered.map(item => (
               <div key={item.id} className="w-full aspect-square overflow-hidden rounded-xl bg-[#181f2a] flex items-center justify-center">
                 <img
-                  src={item.src}
+                  src={item.src ? item.src : '/img/all-img/jose.jpg'}
                   alt={item.title}
                   className="object-cover w-full h-full aspect-square"
                 />

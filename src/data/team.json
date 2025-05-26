@@ -1,24 +1,39 @@
 [
   {
     "id": 1,
-    "name": "Juan Pérez",
-    "role": "Barista Principal",
-    "image": "/img/all-img/team/juan.jpg",
-    "social": {
-      "facebook": "https://facebook.com",
-      "twitter": "https://twitter.com",
-      "instagram": "https://instagram.com"
-    }
+    "name": "María García",
+    "position": "CEO & Fundadora",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Apasionada por el café y la innovación, con más de 15 años de experiencia en la industria.",
+    "linkedin": "https://linkedin.com/in/mariagarcia",
+    "instagram": "https://instagram.com/mariagarcia",
+    "twitter": "https://twitter.com/mariagarcia"
   },
   {
     "id": 2,
-    "name": "María García",
-    "role": "Gerente",
-    "image": "/img/all-img/team/maria.jpg",
-    "social": {
-      "facebook": "https://facebook.com",
-      "twitter": "https://twitter.com",
-      "instagram": "https://instagram.com"
-    }
+    "name": "Carlos Rodríguez",
+    "position": "Barista Principal",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Especialista en preparación de café de especialidad y tostado artesanal.",
+    "instagram": "https://instagram.com/carlosbarista",
+    "linkedin": "https://linkedin.com/in/carlosrodriguez"
+  },
+  {
+    "id": 3,
+    "name": "Ana Martínez",
+    "position": "Gerente de Operaciones",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Experta en gestión de calidad y procesos de producción de café.",
+    "linkedin": "https://linkedin.com/in/anamartinez",
+    "instagram": "https://instagram.com/anamartinez"
+  },
+  {
+    "id": 4,
+    "name": "Luis Pérez",
+    "position": "Desarrollador de Productos",
+    "image": "/img/all-img/jose.jpg",
+    "description": "Innovador en la creación de nuevas mezclas y sabores de café.",
+    "linkedin": "https://linkedin.com/in/luisperez",
+    "twitter": "https://twitter.com/luisperez"
   }
 ] 

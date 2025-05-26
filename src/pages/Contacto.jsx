@@ -4,7 +4,7 @@ import Footer from '../components/layout/Footer';
 const Contacto = () => (
   <>
     <Navbar />
-    <main className="min-h-screen bg-dark-custom text-light-custom flex flex-col items-center justify-center py-12">
+    <main className="min-h-screen bg-dark-custom text-light-custom flex flex-col items-center justify-center mt-24">
       <h1 className="text-4xl font-bold mb-4">Contacto</h1>
       <p className="text-muted-custom max-w-xl text-center mb-8">¿Tienes alguna pregunta? Ponte en contacto con nosotros.</p>
       <div className="w-full max-w-3xl flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -26,10 +26,10 @@ const Contacto = () => (
             Barranquitas Plaza, José Roque Funes 1145, Córdoba.
           </div>
           <div>
-            <span className="font-bold text-lg">Correo:</span> <a href="mailto:info@smartcoffee.com" className="text-primary hover:underline">info@smartcoffee.com</a>
+            <span className="font-bold text-lg">Correo:</span> <a href="mailto:smartcoffeecba@gmail.com" className="text-primary hover:underline">smartcoffeecba@gmail.com</a>
           </div>
           <div>
-            <span className="font-bold text-lg">Teléfono:</span> <a href="tel:+543514567890" className="text-primary hover:underline">+54 351 456-7890</a>
+            <span className="font-bold text-lg">Teléfono:</span> <a href="tel:+54 9 3534 29 2850" className="text-primary hover:underline">+54 351 456-7890</a>
           </div>
         </div>
       </div>

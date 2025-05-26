@@ -2,6 +2,8 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { useState, useEffect, useRef } from 'react';
 import SafeImage from '../components/common/SafeImage';
+import Dashboard from '../admin/Dashboard';
+import { Link } from 'react-router-dom';
 
 const API_URL = 'http://localhost:3001/api';
 
@@ -151,10 +153,11 @@ const ImageInputField = ({ value, onChange }) => {
 };
 
 const Admin = () => {
+  const [activeTab, setActiveTab] = useState('team');
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
   const [files, setFiles] = useState([]);
   const [selectedFile, setSelectedFile] = useState('');
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [editIdx, setEditIdx] = useState(null);
   const [editRow, setEditRow] = useState({});
@@ -177,6 +180,28 @@ const Admin = () => {
   const [modalIdx, setModalIdx] = useState(null);
   const [modalIsNew, setModalIsNew] = useState(false);
 
+  const tabs = [
+    { id: 'team', label: 'Equipo' },
+    { id: 'services', label: 'Servicios' },
+    { id: 'gallery', label: 'Galería' },
+    { id: 'testimonials', label: 'Testimonios' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'projects', label: 'Proyectos' }
+  ];
+
+  useEffect(() => {
+    fetch(`${API_URL}/${activeTab}`)
+      .then(res => res.json())
+      .then(data => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setData([]);
+        setLoading(false);
+      });
+  }, [activeTab]);
+
   // Cargar lista de archivos JSON
   useEffect(() => {
     fetch(`${API_URL}/data/files`)
@@ -184,25 +209,6 @@ const Admin = () => {
       .then(files => setFiles(files.filter(file => FILE_NAMES[file])))
       .catch(() => setFiles([]));
   }, []);
-
-  // Cargar datos del archivo seleccionado
-  useEffect(() => {
-    if (!selectedFile) return;
-    setLoading(true);
-    setError(null);
-    fetch(`${API_URL}/data/${selectedFile}`)
-      .then(res => res.json())
-      .then(json => {
-        let items = Array.isArray(json) ? json : json.projects || json.categories || json;
-        if (!Array.isArray(items)) items = Object.values(items);
-        setData(items);
-      })
-      .catch(err => {
-        setError('No se pudo cargar el archivo');
-        setData([]);
-      })
-      .finally(() => setLoading(false));
-  }, [selectedFile]);
 
   // Determinar archivo de categorías según sección
   const getCategoriesFile = () => {
@@ -217,7 +223,13 @@ const Admin = () => {
     setCatLoading(true);
     fetch(`${API_URL}/data/${getCategoriesFile()}`)
       .then(res => res.json())
-      .then(setCategories)
+      .then(data => {
+        // Asegurarnos de que categories sea un array
+        const categoriesArray = Array.isArray(data) ? data : 
+                              typeof data === 'object' ? Object.values(data) : 
+                              [];
+        setCategories(categoriesArray);
+      })
       .catch(() => setCategories([]))
       .finally(() => setCatLoading(false));
   }, [selectedFile]);
@@ -347,6 +359,8 @@ const Admin = () => {
   // Renderizar gestión de categorías solo para galería y productos
   const renderCategories = () => {
     if (selectedFile !== 'galleryItemsData.json' && selectedFile !== 'products.json') return null;
+    if (!Array.isArray(categories)) return null;
+    
     return (
       <div className="mb-8 w-full max-w-xl bg-[#181f2a] rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4 text-white">Categorías de {selectedFile === 'galleryItemsData.json' ? 'Galería' : 'Productos'}</h2>
@@ -392,6 +406,11 @@ const Admin = () => {
 
   // Renderizar campo editable
   const renderEditableField = (key, value, onChange) => {
+    // No mostrar campo de foto para testimonios
+    if (selectedFile === 'testimonials.json' && isImageField(key)) {
+      return null;
+    }
+    
     if (isImageField(key)) {
       return <ImageInputField value={value} onChange={onChange} />;
     }
@@ -660,13 +679,30 @@ const Admin = () => {
     );
   };
 
+  const handleDownload = () => {
+    const jsonString = JSON.stringify(data, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${activeTab}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  if (loading) {
+    return <div className="p-8">Cargando...</div>;
+  }
+
   return (
     <>
       <Navbar />
       {galleryOpen && <GalleryModal />}
       {renderModal()}
       <main className="min-h-screen bg-dark-custom text-light-custom flex flex-col items-center py-12">
-        <h1 className="text-4xl font-bold mb-8">Panel de Administración</h1>
+        <Dashboard />
         <div className={`w-full max-w-7xl flex ${isCardSection ? 'flex-row gap-8' : 'flex-col'}`}>
           {/* Panel lateral de categorías */}
           {(selectedFile === 'galleryItemsData.json' || selectedFile === 'products.json') && (
@@ -695,6 +731,14 @@ const Admin = () => {
               {isCardSection ? renderCards() : renderTable()}
             </div>
           </section>
+        </div>
+        <div className="mt-6 flex justify-end">
+          <button
+            onClick={handleDownload}
+            className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            Descargar JSON
+          </button>
         </div>
       </main>
       <Footer />
