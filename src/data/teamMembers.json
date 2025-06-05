@@ -5,10 +5,14 @@
     "position": "CEO",
     "image": "/img/all-img/jose.jpg",
     "description": "Fundador y CEO de Smart Coffee con más de 10 años de experiencia en la industria del café.",
-    "instagram": "https://instagram.com/juanperez",
-    "linkedin": "https://linkedin.com/in/juanperez",
-    "tiktok": "https://tiktok.com/@juanperez",
-    "youtube": "https://youtube.com/@juanperez"
+    "social": {
+      "instagram": "https://instagram.com/juanperez",
+      "linkedin": "https://linkedin.com/in/juanperez",
+      "tiktok": "https://tiktok.com/@juanperez",
+      "youtube": "https://youtube.com/@juanperez"
+    },
+    "skills": ["Gestión", "Estrategia", "Innovación"],
+    "experience": "10+ años"
   },
   {
     "id": 2,
@@ -16,10 +20,14 @@
     "position": "CTO",
     "image": "/img/all-img/jose.jpg",
     "description": "Directora de Tecnología, especialista en innovación y desarrollo de productos.",
-    "instagram": "https://instagram.com/mariagarcia",
-    "linkedin": "https://linkedin.com/in/mariagarcia",
-    "tiktok": "",
-    "youtube": "https://youtube.com/@mariagarcia"
+    "social": {
+      "instagram": "https://instagram.com/mariagarcia",
+      "linkedin": "https://linkedin.com/in/mariagarcia",
+      "tiktok": "",
+      "youtube": "https://youtube.com/@mariagarcia"
+    },
+    "skills": ["Tecnología", "Innovación", "Desarrollo"],
+    "experience": "8+ años"
   },
   {
     "id": 3,
@@ -27,10 +35,14 @@
     "position": "Chef Barista",
     "image": "/img/all-img/jose.jpg",
     "description": "Maestro tostador con experiencia internacional en cafés de especialidad.",
-    "instagram": "",
-    "linkedin": "https://linkedin.com/in/carloshernandez",
-    "tiktok": "https://tiktok.com/@carloshernandez",
-    "youtube": ""
+    "social": {
+      "instagram": "",
+      "linkedin": "https://linkedin.com/in/carloshernandez",
+      "tiktok": "https://tiktok.com/@carloshernandez",
+      "youtube": ""
+    },
+    "skills": ["Tostado", "Barismo", "Catación"],
+    "experience": "12+ años"
   },
   {
     "id": 4,
@@ -38,10 +50,14 @@
     "position": "Marketing Digital",
     "image": "/img/all-img/jose.jpg",
     "description": "Estratega digital enfocada en el crecimiento de marcas innovadoras.",
-    "instagram": "https://instagram.com/luciatorres",
-    "linkedin": "",
-    "tiktok": "https://tiktok.com/@luciatorres",
-    "youtube": ""
+    "social": {
+      "instagram": "https://instagram.com/luciatorres",
+      "linkedin": "",
+      "tiktok": "https://tiktok.com/@luciatorres",
+      "youtube": ""
+    },
+    "skills": ["Marketing", "Redes Sociales", "Estrategia"],
+    "experience": "6+ años"
   },
   {
     "id": 5,
@@ -49,10 +65,14 @@
     "position": "Desarrollador Web",
     "image": "/img/all-img/jose.jpg",
     "description": "Desarrollador full stack apasionado por la tecnología y la automatización.",
-    "instagram": "",
-    "linkedin": "https://linkedin.com/in/santiagolopez",
-    "tiktok": "",
-    "youtube": "https://youtube.com/@santiagolopez"
+    "social": {
+      "instagram": "",
+      "linkedin": "https://linkedin.com/in/santiagolopez",
+      "tiktok": "",
+      "youtube": "https://youtube.com/@santiagolopez"
+    },
+    "skills": ["Desarrollo Web", "Automatización", "UI/UX"],
+    "experience": "5+ años"
   },
   {
     "id": 6,
@@ -60,9 +80,13 @@
     "position": "Atención al Cliente",
     "image": "/img/all-img/jose.jpg",
     "description": "Especialista en experiencia del cliente y gestión de eventos.",
-    "instagram": "https://instagram.com/valentinaruiz",
-    "linkedin": "",
-    "tiktok": "",
-    "youtube": ""
+    "social": {
+      "instagram": "https://instagram.com/valentinaruiz",
+      "linkedin": "",
+      "tiktok": "",
+      "youtube": ""
+    },
+    "skills": ["Servicio al Cliente", "Eventos", "Comunicación"],
+    "experience": "4+ años"
   }
 ] 

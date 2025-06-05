@@ -1,13 +1,19 @@
 'use client';
-import React, { useState } from 'react';
-import { defaultImages } from '../../utils/imageUtils';
+import React, { useState, useEffect } from 'react';
+import { defaultImages, getImagePath } from '../../utils/imageUtils';
 
 const SafeImage = ({ src, alt, width, height, className, fallbackType = 'default' }) => {
-    const [imgSrc, setImgSrc] = useState(src);
+    const [imgSrc, setImgSrc] = useState(getImagePath(src));
     const [error, setError] = useState(false);
+
+    useEffect(() => {
+        setImgSrc(getImagePath(src));
+        setError(false);
+    }, [src]);
 
     const handleError = () => {
         if (!error) {
+            console.warn(`Error al cargar imagen: ${src}`);
             setError(true);
             setImgSrc(defaultImages[fallbackType] || defaultImages.default);
         }

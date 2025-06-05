@@ -12,7 +12,7 @@ const Testimonials = () => {
     const [formData, setFormData] = useState({
         name: '',
         role: '',
-        content: '',
+        testimonio: '',
         image: ''
     })
     const [showAlert, setShowAlert] = useState(false)
@@ -122,7 +122,7 @@ const Testimonials = () => {
         setFormData({
             name: testimonial.name || '',
             role: testimonial.role || '',
-            content: testimonial.content || '',
+            testimonio: testimonial.testimonio || '',
             image: testimonial.image || ''
         })
         setPreviewImage(testimonial.image || null)
@@ -175,7 +175,7 @@ const Testimonials = () => {
                 setFormData({
                     name: '',
                     role: '',
-                    content: '',
+                    testimonio: '',
                     image: ''
                 });
                 setPreviewImage(null);
@@ -194,7 +194,7 @@ const Testimonials = () => {
         setFormData({
             name: testimonial.name || '',
             role: testimonial.role || '',
-            content: testimonial.content || '',
+            testimonio: testimonial.testimonio || '',
             image: testimonial.image || ''
         })
         setPreviewImage(testimonial.image || null)
@@ -205,7 +205,7 @@ const Testimonials = () => {
         setFormData({
             name: '',
             role: '',
-            content: '',
+            testimonio: '',
             image: ''
         })
         setPreviewImage(null)
@@ -264,7 +264,7 @@ const Testimonials = () => {
                         setFormData({
                             name: '',
                             role: '',
-                            content: '',
+                            testimonio: '',
                             image: ''
                         })
                         setPreviewImage(null)
@@ -318,7 +318,7 @@ const Testimonials = () => {
                                 setFormData({
                                     name: '',
                                     role: '',
-                                    content: '',
+                                    testimonio: '',
                                     image: ''
                                 });
                                 setPreviewImage(null);
@@ -330,15 +330,15 @@ const Testimonials = () => {
                             <div className="admin-form-group">
                                 <label>Testimonio</label>
                                 <textarea
-                                    name="content"
-                                    value={formData.content}
-                                    onChange={(e) => handleBasicChange('content', e.target.value)}
+                                    name="testimonio"
+                                    value={formData.testimonio}
+                                    onChange={(e) => handleBasicChange('testimonio', e.target.value)}
                                     placeholder="Escribe el testimonio..."
                                     required
                                     maxLength={MAX_QUOTE_LENGTH}
                                 />
-                                <div style={{ fontSize: 13, color: formData.content.length > MAX_QUOTE_LENGTH - 20 ? '#ff4800' : '#888', textAlign: 'right', marginTop: 2 }}>
-                                    {formData.content.length}/{MAX_QUOTE_LENGTH} caracteres
+                                <div style={{ fontSize: 13, color: formData.testimonio.length > MAX_QUOTE_LENGTH - 20 ? '#ff4800' : '#888', textAlign: 'right', marginTop: 2 }}>
+                                    {formData.testimonio.length}/{MAX_QUOTE_LENGTH} caracteres
                                 </div>
                             </div>
                             <div className="admin-form-group">
@@ -370,7 +370,7 @@ const Testimonials = () => {
                                 />
                             </div>
                             <div className="admin-form-actions" style={{ display: 'flex', gap: 12, justifyContent: 'flex-end' }}>
-                                <button type="submit" className="admin-btn admin-btn-primary" disabled={formData.content.length > MAX_QUOTE_LENGTH}>
+                                <button type="submit" className="admin-btn admin-btn-primary" disabled={formData.testimonio.length > MAX_QUOTE_LENGTH}>
                                     <i className="bx bx-save"></i>
                                     {editingId ? 'Actualizar' : 'Crear'}
                                 </button>
@@ -383,7 +383,7 @@ const Testimonials = () => {
                                         setFormData({
                                             name: '',
                                             role: '',
-                                            content: '',
+                                            testimonio: '',
                                             image: ''
                                         });
                                         setPreviewImage(null);
@@ -453,7 +453,7 @@ const Testimonials = () => {
                                 display: '-webkit-box',
                                 WebkitLineClamp: 3,
                                 WebkitBoxOrient: 'vertical',
-                            }}>{testimonial.content}</p>
+                            }}>{testimonial.testimonio}</p>
                         </div>
                         <div className="testimonial-actions" style={{ display: 'flex', gap: 16, marginTop: 'auto' }}>
                             <button 

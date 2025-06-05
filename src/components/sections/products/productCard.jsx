@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import SafeImage from '@/components/common/SafeImage'
 
 const ProductCard = ({ product }) => {
     return (
@@ -28,9 +28,10 @@ const ProductCard = ({ product }) => {
                 minHeight: '180px',
                 maxHeight: '220px'
             }}>
-                <img 
-                    src={product.image || '/img/all-img/product.jpg'} 
+                <SafeImage 
+                    src={product.image}
                     alt={product.name}
+                    fallbackType="products"
                     style={{
                         position: 'absolute',
                         top: 0,

@@ -14,8 +14,12 @@ export default defineConfig({
   publicDir: 'public',
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
     assetsDir: 'assets',
     rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
@@ -25,7 +29,8 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000,
+    port: 5173,
+    strictPort: true,
     open: true,
   }
 }) 

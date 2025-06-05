@@ -1,100 +1,1107 @@
 [
-  {"id": 1, "name": "Café chico", "description": "Opciones: Cortado, Lágrima, Expreso.", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$1800", "saleTag": false, "newTag": false},
-  {"id": 2, "name": "Café jarro", "description": "Opciones: Cortado, Lágrima, Expreso.", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$2000", "saleTag": false, "newTag": false},
-  {"id": 3, "name": "Café doble", "description": "Opciones: Cortado, Lágrima, Expreso.", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$3000", "saleTag": false, "newTag": false},
-  {"id": 4, "name": "Capuchino", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$3500", "saleTag": false, "newTag": false},
-  {"id": 5, "name": "Frapuchino", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$3500", "saleTag": false, "newTag": false},
-  {"id": 6, "name": "Jugo exprimido (Naranja, vaso)", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$3200", "saleTag": false, "newTag": false},
-  {"id": 7, "name": "Jugo exprimido (Naranja y zanahoria, vaso)", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$3400", "saleTag": false, "newTag": false},
-  {"id": 8, "name": "Limonada (vaso)", "description": "Ingredientes: limón, menta, jengibre", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$2000", "saleTag": false, "newTag": false},
-  {"id": 9, "name": "Limonada (jarra)", "description": "Ingredientes: limón, menta, jengibre", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$6000", "saleTag": false, "newTag": false},
-  {"id": 10, "name": "Mafalda", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$1300", "saleTag": false, "newTag": false},
-  {"id": 11, "name": "Medialuna", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$1000", "saleTag": false, "newTag": false},
-  {"id": 12, "name": "Criollo", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$1000", "saleTag": false, "newTag": false},
-  {"id": 13, "name": "Pasta frola", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$1800", "saleTag": false, "newTag": false},
-  {"id": 14, "name": "Barra de cereales", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$1500", "saleTag": false, "newTag": false},
-  {"id": 15, "name": "Alfajores", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Cafetería"], "oldPrice": null, "newPrice": "$1200", "saleTag": false, "newTag": false},
-
-  {"id": 16, "name": "Completo", "description": "Incluye: Infusión, 2 medialunas, untable, jugo", "image": "/img/all-img/jose.jpg", "categories": ["Desayunos y Meriendas"], "oldPrice": null, "newPrice": "$5500", "saleTag": false, "newTag": false},
-  {"id": 17, "name": "Light", "description": "Incluye: Infusión, 2 tostadas, untables, soda, ensalada de frutas", "image": "/img/all-img/jose.jpg", "categories": ["Desayunos y Meriendas"], "oldPrice": null, "newPrice": "$5500", "saleTag": false, "newTag": false},
-  {"id": 18, "name": "Simple", "description": "Incluye: Infusión, 1 criollo o medialuna, soda", "image": "/img/all-img/jose.jpg", "categories": ["Desayunos y Meriendas"], "oldPrice": null, "newPrice": "$3800", "saleTag": false, "newTag": false},
-  {"id": 19, "name": "Campo", "description": "Incluye: Infusión, tostón, revuelto de huevo, untables, frutas", "image": "/img/all-img/jose.jpg", "categories": ["Desayunos y Meriendas"], "oldPrice": null, "newPrice": "$8000", "saleTag": false, "newTag": false},
-  {"id": 20, "name": "Proteico", "description": "Incluye: Infusión, tostadas, jamón y queso, untables, jugo, frutas", "image": "/img/all-img/jose.jpg", "categories": ["Desayunos y Meriendas"], "oldPrice": null, "newPrice": "$7500", "saleTag": false, "newTag": false},
-  {"id": 21, "name": "Sin infusión", "description": "Incluye: revuelto de huevo, tostadas, untables", "image": "/img/all-img/jose.jpg", "categories": ["Desayunos y Meriendas"], "oldPrice": null, "newPrice": "$4000", "saleTag": false, "newTag": false},
-
-  {"id": 22, "name": "Licuado de ananá", "description": "Opciones: agua, leche", "image": "/img/all-img/jose.jpg", "categories": ["Licuados"], "oldPrice": null, "newPrice": "$3800", "saleTag": false, "newTag": false},
-  {"id": 23, "name": "Licuado de banana", "description": "Opciones: leche", "image": "/img/all-img/jose.jpg", "categories": ["Licuados"], "oldPrice": null, "newPrice": "$3800", "saleTag": false, "newTag": false},
-  {"id": 24, "name": "Licuado de durazno", "description": "Opciones: agua, leche", "image": "/img/all-img/jose.jpg", "categories": ["Licuados"], "oldPrice": null, "newPrice": "$3800", "saleTag": false, "newTag": false},
-  {"id": 25, "name": "Licuado de frutilla", "description": "Opciones: agua, leche", "image": "/img/all-img/jose.jpg", "categories": ["Licuados"], "oldPrice": null, "newPrice": "$3800", "saleTag": false, "newTag": false},
-
-  {"id": 26, "name": "Tarta de jamón y queso", "description": "Ingredientes: muzarella, jamón", "image": "/img/all-img/jose.jpg", "categories": ["Tartas"], "oldPrice": null, "newPrice": "$4500", "saleTag": false, "newTag": false},
-  {"id": 27, "name": "Tarta capresse", "description": "Ingredientes: tomate, queso, albahaca", "image": "/img/all-img/jose.jpg", "categories": ["Tartas"], "oldPrice": null, "newPrice": "$4500", "saleTag": false, "newTag": false},
-  {"id": 28, "name": "Tarta de calabaza", "description": "Ingredientes: salteado de verduras", "image": "/img/all-img/jose.jpg", "categories": ["Tartas"], "oldPrice": null, "newPrice": "$4500", "saleTag": false, "newTag": false},
-  {"id": 29, "name": "Tarta de zapallito", "description": "Ingredientes: salteado de verduras", "image": "/img/all-img/jose.jpg", "categories": ["Tartas"], "oldPrice": null, "newPrice": "$4500", "saleTag": false, "newTag": false},
-
-  {"id": 30, "name": "Empanada de jamón y queso", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Empanadas"], "oldPrice": null, "newPrice": "$1500", "saleTag": false, "newTag": false},
-  {"id": 31, "name": "Empanada salada", "description": "Ingredientes: carne picada, cebolla, pimiento", "image": "/img/all-img/jose.jpg", "categories": ["Empanadas"], "oldPrice": null, "newPrice": "$1500", "saleTag": false, "newTag": false},
-  {"id": 32, "name": "Empanada criolla", "description": "Ingredientes: carne, cebolla de verdeo, huevo, pimiento", "image": "/img/all-img/jose.jpg", "categories": ["Empanadas"], "oldPrice": null, "newPrice": "$1500", "saleTag": false, "newTag": false},
-  {"id": 33, "name": "Empanada árabe", "description": "Ingredientes: carne, cebolla, pimiento, limón", "image": "/img/all-img/jose.jpg", "categories": ["Empanadas"], "oldPrice": null, "newPrice": "$1500", "saleTag": false, "newTag": false},
-  {"id": 34, "name": "Empanada de pollo", "description": "Ingredientes: pollo, cebolla, pimiento", "image": "/img/all-img/jose.jpg", "categories": ["Empanadas"], "oldPrice": null, "newPrice": "$1500", "saleTag": false, "newTag": false},
-
-  {"id": 35, "name": "Tostado simple", "description": "Ingredientes: jamón, queso", "image": "/img/all-img/jose.jpg", "categories": ["Sándwiches"], "oldPrice": null, "newPrice": "$4500", "saleTag": false, "newTag": false},
-  {"id": 36, "name": "Tostado primavera", "description": "Ingredientes: jamón, queso, lechuga, tomate", "image": "/img/all-img/jose.jpg", "categories": ["Sándwiches"], "oldPrice": null, "newPrice": "$4900", "saleTag": false, "newTag": false},
-  {"id": 37, "name": "Milanesa completa", "description": "Ingredientes: milanesa, jamón, queso, huevo, lechuga, tomate", "image": "/img/all-img/jose.jpg", "categories": ["Sándwiches"], "oldPrice": null, "newPrice": "$10500", "saleTag": false, "newTag": false},
-  {"id": 38, "name": "Lomo completo", "description": "Ingredientes: lomo, jamón, queso, lechuga, tomate", "image": "/img/all-img/jose.jpg", "categories": ["Sándwiches"], "oldPrice": null, "newPrice": "$11500", "saleTag": false, "newTag": false},
-  {"id": 39, "name": "Hamburguesa completa", "description": "Ingredientes: medallón, jamón, queso, lechuga, tomate, huevo", "image": "/img/all-img/jose.jpg", "categories": ["Sándwiches"], "oldPrice": null, "newPrice": "$10500", "saleTag": false, "newTag": false},
-
-  {"id": 40, "name": "Ensalada grande", "description": "Ingredientes: lechuga, tomate, huevo, zanahoria, choclo, jamón, queso", "image": "/img/all-img/jose.jpg", "categories": ["Ensaladas"], "oldPrice": null, "newPrice": "$5500", "saleTag": false, "newTag": false},
-  {"id": 41, "name": "Ensalada César", "description": "Ingredientes: pollo, lechuga, crutones, parmesano", "image": "/img/all-img/jose.jpg", "categories": ["Ensaladas"], "oldPrice": null, "newPrice": "$6500", "saleTag": false, "newTag": false},
-  {"id": 42, "name": "Ensalada primavera", "description": "Ingredientes: arroz, zanahoria, arvejas, choclo, jamón, mayonesa", "image": "/img/all-img/jose.jpg", "categories": ["Ensaladas"], "oldPrice": null, "newPrice": "$7500", "saleTag": false, "newTag": false},
-  {"id": 43, "name": "Ensalada Waldorf", "description": "Ingredientes: manzana verde, apio, nuez", "image": "/img/all-img/jose.jpg", "categories": ["Ensaladas"], "oldPrice": null, "newPrice": "$6500", "saleTag": false, "newTag": false},
-
-  {"id": 44, "name": "Vigilante", "description": "Ingredientes: queso, dulce de batata", "image": "/img/all-img/jose.jpg", "categories": ["Postres"], "oldPrice": null, "newPrice": "$3500", "saleTag": false, "newTag": false},
-  {"id": 45, "name": "Ensalada de frutas", "description": "Ingredientes: frutas de estación", "image": "/img/all-img/jose.jpg", "categories": ["Postres"], "oldPrice": null, "newPrice": "$3000", "saleTag": false, "newTag": false},
-  {"id": 46, "name": "Flan", "description": "Acompañamientos: dulce de leche, crema", "image": "/img/all-img/jose.jpg", "categories": ["Postres"], "oldPrice": null, "newPrice": "$3000", "saleTag": false, "newTag": false},
-  {"id": 47, "name": "Budín de pan", "description": "Acompañamientos: dulce de leche, crema", "image": "/img/all-img/jose.jpg", "categories": ["Postres"], "oldPrice": null, "newPrice": "$3000", "saleTag": false, "newTag": false},
-
-  {"id": 48, "name": "Costeleta con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$10500", "saleTag": false, "newTag": false},
-  {"id": 49, "name": "Milanesa napolitana con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$10000", "saleTag": false, "newTag": false},
-  {"id": 50, "name": "Milanesa con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$10000", "saleTag": false, "newTag": false},
-  {"id": 51, "name": "Milanesa a caballo con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$8500", "saleTag": false, "newTag": false},
-  {"id": 52, "name": "Matambre a la pizza con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$11250", "saleTag": false, "newTag": false},
-  {"id": 53, "name": "Costilla de cerdo con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$11250", "saleTag": false, "newTag": false},
-  {"id": 54, "name": "Roulette de pollo con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$11250", "saleTag": false, "newTag": false},
-  {"id": 55, "name": "Omelette simple con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$5000", "saleTag": false, "newTag": false},
-  {"id": 56, "name": "Omelette completo con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$6500", "saleTag": false, "newTag": false},
-  {"id": 57, "name": "Hamburguesa al plato con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$7500", "saleTag": false, "newTag": false},
-  {"id": 58, "name": "Tortilla de papas con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$6500", "saleTag": false, "newTag": false},
-  {"id": 59, "name": "Bife de pollo con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$7500", "saleTag": false, "newTag": false},
-  {"id": 60, "name": "Wrap con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$7500", "saleTag": false, "newTag": false},
-  {"id": 61, "name": "Wrap solo", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 62, "name": "Churrasco con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$10000", "saleTag": false, "newTag": false},
-  {"id": 63, "name": "Suprema con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$9500", "saleTag": false, "newTag": false},
-  {"id": 64, "name": "Pechuga grillada con guarnición", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$9500", "saleTag": false, "newTag": false},
-  {"id": 65, "name": "Menú ejecutivo", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Menú"], "oldPrice": null, "newPrice": "$7500", "saleTag": false, "newTag": false},
-
-  {"id": 66, "name": "Agua saborizada 1L (pomelo rosado)", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas sin alcohol"], "oldPrice": null, "newPrice": "$2500", "saleTag": false, "newTag": false},
-  {"id": 67, "name": "Agua saborizada 500ml (pomelo, manzana, pera)", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas sin alcohol"], "oldPrice": null, "newPrice": "$1750", "saleTag": false, "newTag": false},
-  {"id": 68, "name": "Agua 500ml", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas sin alcohol"], "oldPrice": null, "newPrice": "$1500", "saleTag": false, "newTag": false},
-  {"id": 69, "name": "Soda 500ml", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas sin alcohol"], "oldPrice": null, "newPrice": "$1500", "saleTag": false, "newTag": false},
-  {"id": 70, "name": "Gaseosa 500ml", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas sin alcohol"], "oldPrice": null, "newPrice": "$1900", "saleTag": false, "newTag": false},
-  {"id": 71, "name": "Gaseosa sin azúcar 500ml", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas sin alcohol"], "oldPrice": null, "newPrice": "$1900", "saleTag": false, "newTag": false},
-
-  {"id": 72, "name": "Cerveza Imperial 1L", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas con alcohol"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 73, "name": "Cerveza Andes 1L", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas con alcohol"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 74, "name": "Cerveza Amstel 1L", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas con alcohol"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 75, "name": "Champagne Mumm", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas con alcohol"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 76, "name": "Champagne Extra Brut", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas con alcohol"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 77, "name": "Frizante Papillon", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Bebidas con alcohol"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-
-  {"id": 78, "name": "Orgánico blanco: Pinot Gris 2024", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Vinos de la casa"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 79, "name": "Orgánico tinto: Cabernet Franc 2023", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Vinos de la casa"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 80, "name": "Orgánico tinto: Merlot Papillon 2024", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["Vinos de la casa"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-
-  {"id": 81, "name": "Gin tonic", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["After Office"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 82, "name": "Copa de vino", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["After Office"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 83, "name": "Fernet", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["After Office"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 84, "name": "Gancia", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["After Office"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 85, "name": "Aperol", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["After Office"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false},
-  {"id": 86, "name": "Cerveza artesanal", "description": "", "image": "/img/all-img/jose.jpg", "categories": ["After Office"], "oldPrice": null, "newPrice": "", "saleTag": false, "newTag": false}
-] 
+  {
+    "id": 2,
+    "name": "Café jarro",
+    "description": "Opciones: Cortado, Lágrima, Expreso.",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwyfHxjYWZlfGVufDB8fHx8MTc0ODk2MzQ2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$2000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 3,
+    "name": "Café doble",
+    "description": "Opciones: Cortado, Lágrima, Expreso.",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwyfHxjYWZlfGVufDB8fHx8MTc0ODk2MzQ2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 4,
+    "name": "Capuchino",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwyfHxjYWZlfGVufDB8fHx8MTc0ODk2MzQ2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 5,
+    "name": "Frapuchino",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwyfHxjYWZlfGVufDB8fHx8MTc0ODk2MzQ2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 6,
+    "name": "Jugo exprimido (Naranja, vaso)",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1579892515558-4233fb3a7f06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwyMHx8anVnb3xlbnwwfHx8fDE3NDg5NjQ1MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3200",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 7,
+    "name": "Jugo exprimido (Naranja y zanahoria, vaso)",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1560526860-1f0e56046c85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwxMnx8anVnb3xlbnwwfHx8fDE3NDg5NjQ1MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3400",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 8,
+    "name": "Limonada (vaso)",
+    "description": "Ingredientes: limón, menta, jengibre",
+    "image": "https://images.unsplash.com/photo-1665556662881-e713386179c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHw2fHxsaW1vbmFkYXxlbnwwfHx8fDE3NDg5NjQ1NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$2000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 9,
+    "name": "Limonada (jarra)",
+    "description": "Ingredientes: limón, menta, jengibre",
+    "image": "https://images.unsplash.com/photo-1665556662881-e713386179c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHw2fHxsaW1vbmFkYXxlbnwwfHx8fDE3NDg5NjQ1NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$6000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 10,
+    "name": "Mafalda",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1562079859-ef41b665a46d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwxfHxtZWRpYWx1bmF8ZW58MHx8fHwxNzQ4OTY0NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1300",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 11,
+    "name": "Medialuna",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1562079859-ef41b665a46d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwxfHxtZWRpYWx1bmF8ZW58MHx8fHwxNzQ4OTY0NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 12,
+    "name": "Criollo",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwxNHx8cGFuYWRlcmlhfGVufDB8fHx8MTc0ODk2NDYwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 13,
+    "name": "Pasta frola",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1586724832670-3b5ddb084c73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwxMnx8cGFuYWRlcmlhfGVufDB8fHx8MTc0ODk2NDYwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1800",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 14,
+    "name": "Barra de cereales",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1614373532018-92a75430a0da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwxOXx8Y2VyZWFsfGVufDB8fHx8MTc0ODk2NDY1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 15,
+    "name": "Alfajores",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1604953781841-004f1848ed3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NTk0Njd8MHwxfHNlYXJjaHwxfHxhbGZham9yfGVufDB8fHx8MTc0ODk2NDY3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "categories": [
+      "Cafetería"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1200",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 16,
+    "name": "Completo",
+    "description": "Incluye: Infusión, 2 medialunas, untable, jugo",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Desayunos y Meriendass"
+    ],
+    "oldPrice": null,
+    "newPrice": "$5500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 17,
+    "name": "Light",
+    "description": "Incluye: Infusión, 2 tostadas, untables, soda, ensalada de frutas",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Desayunos y Meriendass"
+    ],
+    "oldPrice": null,
+    "newPrice": "$5500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 18,
+    "name": "Simple",
+    "description": "Incluye: Infusión, 1 criollo o medialuna, soda",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Desayunos y Meriendass"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3800",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 19,
+    "name": "Campo",
+    "description": "Incluye: Infusión, tostón, revuelto de huevo, untables, frutas",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Desayunos y Meriendass"
+    ],
+    "oldPrice": null,
+    "newPrice": "$8000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 20,
+    "name": "Proteico",
+    "description": "Incluye: Infusión, tostadas, jamón y queso, untables, jugo, frutas",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Desayunos y Meriendass"
+    ],
+    "oldPrice": null,
+    "newPrice": "$7500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 21,
+    "name": "Sin infusión",
+    "description": "Incluye: revuelto de huevo, tostadas, untables",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Desayunos y Meriendass"
+    ],
+    "oldPrice": null,
+    "newPrice": "$4000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 22,
+    "name": "Licuado de ananá",
+    "description": "Opciones: agua, leche",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Licuados"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3800",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 23,
+    "name": "Licuado de banana",
+    "description": "Opciones: leche",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Licuados"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3800",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 24,
+    "name": "Licuado de durazno",
+    "description": "Opciones: agua, leche",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Licuados"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3800",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 25,
+    "name": "Licuado de frutilla",
+    "description": "Opciones: agua, leche",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Licuados"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3800",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 26,
+    "name": "Tarta de jamón y queso",
+    "description": "Ingredientes: muzarella, jamón",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Tartas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$4500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 27,
+    "name": "Tarta capresse",
+    "description": "Ingredientes: tomate, queso, albahaca",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Tartas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$4500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 28,
+    "name": "Tarta de calabaza",
+    "description": "Ingredientes: salteado de verduras",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Tartas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$4500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 29,
+    "name": "Tarta de zapallito",
+    "description": "Ingredientes: salteado de verduras",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Tartas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$4500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 30,
+    "name": "Empanada de jamón y queso",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Empanadas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 31,
+    "name": "Empanada salada",
+    "description": "Ingredientes: carne picada, cebolla, pimiento",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Empanadas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 32,
+    "name": "Empanada criolla",
+    "description": "Ingredientes: carne, cebolla de verdeo, huevo, pimiento",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Empanadas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 33,
+    "name": "Empanada árabe",
+    "description": "Ingredientes: carne, cebolla, pimiento, limón",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Empanadas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 34,
+    "name": "Empanada de pollo",
+    "description": "Ingredientes: pollo, cebolla, pimiento",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Empanadas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 35,
+    "name": "Tostado simple",
+    "description": "Ingredientes: jamón, queso",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Sándwiches"
+    ],
+    "oldPrice": null,
+    "newPrice": "$4500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 36,
+    "name": "Tostado primavera",
+    "description": "Ingredientes: jamón, queso, lechuga, tomate",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Sándwiches"
+    ],
+    "oldPrice": null,
+    "newPrice": "$4900",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 37,
+    "name": "Milanesa completa",
+    "description": "Ingredientes: milanesa, jamón, queso, huevo, lechuga, tomate",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Sándwiches"
+    ],
+    "oldPrice": null,
+    "newPrice": "$10500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 38,
+    "name": "Lomo completo",
+    "description": "Ingredientes: lomo, jamón, queso, lechuga, tomate",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Sándwiches"
+    ],
+    "oldPrice": null,
+    "newPrice": "$11500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 39,
+    "name": "Hamburguesa completa",
+    "description": "Ingredientes: medallón, jamón, queso, lechuga, tomate, huevo",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Sándwiches"
+    ],
+    "oldPrice": null,
+    "newPrice": "$10500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 40,
+    "name": "Ensalada grande",
+    "description": "Ingredientes: lechuga, tomate, huevo, zanahoria, choclo, jamón, queso",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Ensaladas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$5500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 41,
+    "name": "Ensalada César",
+    "description": "Ingredientes: pollo, lechuga, crutones, parmesano",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Ensaladas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$6500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 42,
+    "name": "Ensalada primavera",
+    "description": "Ingredientes: arroz, zanahoria, arvejas, choclo, jamón, mayonesa",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Ensaladas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$7500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 43,
+    "name": "Ensalada Waldorf",
+    "description": "Ingredientes: manzana verde, apio, nuez",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Ensaladas"
+    ],
+    "oldPrice": null,
+    "newPrice": "$6500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 44,
+    "name": "Vigilante",
+    "description": "Ingredientes: queso, dulce de batata",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Postres"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 45,
+    "name": "Ensalada de frutas",
+    "description": "Ingredientes: frutas de estación",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Postres"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 46,
+    "name": "Flan",
+    "description": "Acompañamientos: dulce de leche, crema",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Postres"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 47,
+    "name": "Budín de pan",
+    "description": "Acompañamientos: dulce de leche, crema",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Postres"
+    ],
+    "oldPrice": null,
+    "newPrice": "$3000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 48,
+    "name": "Costeleta con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$10500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 49,
+    "name": "Milanesa napolitana con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$10000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 50,
+    "name": "Milanesa con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$10000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 51,
+    "name": "Milanesa a caballo con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$8500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 52,
+    "name": "Matambre a la pizza con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$11250",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 53,
+    "name": "Costilla de cerdo con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$11250",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 54,
+    "name": "Roulette de pollo con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$11250",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 55,
+    "name": "Omelette simple con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$5000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 56,
+    "name": "Omelette completo con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$6500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 57,
+    "name": "Hamburguesa al plato con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$7500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 58,
+    "name": "Tortilla de papas con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$6500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 59,
+    "name": "Bife de pollo con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$7500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 60,
+    "name": "Wrap con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$7500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 61,
+    "name": "Wrap solo",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 62,
+    "name": "Churrasco con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$10000",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 63,
+    "name": "Suprema con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$9500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 64,
+    "name": "Pechuga grillada con guarnición",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$9500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 65,
+    "name": "Menú ejecutivo",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Menú"
+    ],
+    "oldPrice": null,
+    "newPrice": "$7500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 66,
+    "name": "Agua saborizada 1L (pomelo rosado)",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas sin alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "$2500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 67,
+    "name": "Agua saborizada 500ml (pomelo, manzana, pera)",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas sin alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1750",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 68,
+    "name": "Agua 500ml",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas sin alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 69,
+    "name": "Soda 500ml",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas sin alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1500",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 70,
+    "name": "Gaseosa 500ml",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas sin alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1900",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 71,
+    "name": "Gaseosa sin azúcar 500ml",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas sin alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "$1900",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 72,
+    "name": "Cerveza Imperial 1L",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas con alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 73,
+    "name": "Cerveza Andes 1L",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas con alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 74,
+    "name": "Cerveza Amstel 1L",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas con alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 75,
+    "name": "Champagne Mumm",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas con alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 76,
+    "name": "Champagne Extra Brut",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas con alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 77,
+    "name": "Frizante Papillon",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Bebidas con alcohol"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 78,
+    "name": "Orgánico blanco: Pinot Gris 2024",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Vinos de la casa"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 79,
+    "name": "Orgánico tinto: Cabernet Franc 2023",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Vinos de la casa"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 80,
+    "name": "Orgánico tinto: Merlot Papillon 2024",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "Vinos de la casa"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 81,
+    "name": "Gin tonic",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "After Office"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 82,
+    "name": "Copa de vino",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "After Office"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 83,
+    "name": "Fernet",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "After Office"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 84,
+    "name": "Gancia",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "After Office"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 85,
+    "name": "Aperol",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "After Office"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  },
+  {
+    "id": 86,
+    "name": "Cerveza artesanal",
+    "description": "",
+    "image": "/img/all-img/jose.jpg",
+    "categories": [
+      "After Office"
+    ],
+    "oldPrice": null,
+    "newPrice": "",
+    "saleTag": false,
+    "newTag": false
+  }
+]

@@ -4,20 +4,44 @@
     "name": "Laura Sánchez",
     "role": "Cliente Regular",
     "testimonio": "El mejor café que he probado. La atención y el ambiente son increíbles. Me encanta venir cada mañana a disfrutar de mi café favorito.",
-    "image": "/img/all-img/jose.jpg"
+    "image": "/img/all-img/jose.jpg",
+    "rating": 5,
+    "date": "2024-03-15"
   },
   {
     "id": 2,
     "name": "Roberto Martínez",
     "role": "Barista Profesional",
     "testimonio": "Como barista, aprecio mucho la calidad de sus granos y el proceso de tostado. SmartCoffee ha elevado mis estándares de calidad.",
-    "image": "/img/all-img/jose.jpg"
+    "image": "/img/all-img/jose.jpg",
+    "rating": 5,
+    "date": "2024-03-10"
   },
   {
     "id": 3,
     "name": "Carmen López",
     "role": "Dueña de Cafetería",
     "testimonio": "SmartCoffee nos ha ayudado a mejorar significativamente la calidad de nuestro café. Su asesoramiento ha sido invaluable.",
-    "image": "/img/all-img/jose.jpg"
+    "image": "/img/all-img/jose.jpg",
+    "rating": 5,
+    "date": "2024-03-05"
+  },
+  {
+    "id": 4,
+    "name": "Diego Rodríguez",
+    "role": "Cliente Frecuente",
+    "testimonio": "El ambiente es perfecto para trabajar y reunirse. El café es excelente y el servicio es impecable.",
+    "image": "/img/all-img/jose.jpg",
+    "rating": 5,
+    "date": "2024-03-01"
+  },
+  {
+    "id": 5,
+    "name": "Ana Martínez",
+    "role": "Estudiante",
+    "testimonio": "Me encanta estudiar aquí. El WiFi es rápido, el café es delicioso y el ambiente es muy agradable.",
+    "image": "/img/all-img/jose.jpg",
+    "rating": 5,
+    "date": "2024-02-28"
   }
 ] 

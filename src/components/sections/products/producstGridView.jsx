@@ -3,12 +3,25 @@ import React, { useState, useEffect } from 'react'
 import ProductCard from './productCard'
 import Pagination from '../../ui/pagination'
 import { FaSearch } from 'react-icons/fa'
+import SafeImage from '@/components/common/SafeImage'
 
 const SelectOptions = [
     { value: 'Default', label: 'Por defecto' },
     { value: 'Price: low to high', label: 'Precio: menor a mayor' },
     { value: 'Price: high to low', label: 'Precio: mayor a menor' }
 ];
+
+// Función de utilidad para formatear y validar precios
+const formatPrice = (price) => {
+    if (!price) return 0;
+    // Remover símbolos de moneda y espacios
+    const cleanPrice = price.toString().replace(/[^\d.,]/g, '').trim();
+    // Convertir coma a punto si existe
+    const normalizedPrice = cleanPrice.replace(',', '.');
+    // Convertir a número
+    const numericPrice = parseFloat(normalizedPrice);
+    return isNaN(numericPrice) ? 0 : numericPrice;
+};
 
 const ProductDetailModal = ({ product, onClose }) => {
     if (!product) return null;
@@ -82,9 +95,10 @@ const ProductDetailModal = ({ product, onClose }) => {
                         background: '#18192a',
                         flexShrink: 0
                     }}>
-                        <img 
-                            src={product.image || '/img/all-img/product.jpg'} 
-                            alt={product.name} 
+                        <SafeImage 
+                            src={product.image}
+                            alt={product.name}
+                            fallbackType="products"
                             style={{
                                 width: '100%',
                                 height: '100%',
@@ -262,15 +276,15 @@ const ProducstGridView = () => {
     // Ordenamiento
     if (sort === 'Price: low to high') {
         filteredProducts = [...filteredProducts].sort((a, b) => {
-            const priceA = parseFloat((a.newPrice || '').toString().replace(/[^\d.,]/g, '').replace(',', '.'));
-            const priceB = parseFloat((b.newPrice || '').toString().replace(/[^\d.,]/g, '').replace(',', '.'));
-            return (isNaN(priceA) ? Infinity : priceA) - (isNaN(priceB) ? Infinity : priceB);
+            const priceA = formatPrice(a.newPrice);
+            const priceB = formatPrice(b.newPrice);
+            return priceA - priceB;
         });
     } else if (sort === 'Price: high to low') {
         filteredProducts = [...filteredProducts].sort((a, b) => {
-            const priceA = parseFloat((a.newPrice || '').toString().replace(/[^\d.,]/g, '').replace(',', '.'));
-            const priceB = parseFloat((b.newPrice || '').toString().replace(/[^\d.,]/g, '').replace(',', '.'));
-            return (isNaN(priceB) ? -Infinity : priceB) - (isNaN(priceA) ? -Infinity : priceA);
+            const priceA = formatPrice(a.newPrice);
+            const priceB = formatPrice(b.newPrice);
+            return priceB - priceA;
         });
     } else if (sort === 'Latest') {
         filteredProducts = [...filteredProducts].slice().reverse();

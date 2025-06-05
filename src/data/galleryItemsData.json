@@ -3,98 +3,128 @@
     "id": 1,
     "title": "Café & Gastronomía",
     "description": "Un espacio para disfrutar de cafés de autor, comidas deliciosas y experiencias after office en un ambiente moderno y creativo.",
-    "icon": "bx-coffee",
-    "src": "/uploads/1747648186405-image-Photoroom (6).png",
-    "category": "Café"
+    "image": "/uploads/1747648186405-image-Photoroom (6).png",
+    "category": "Café",
+    "icon": "bx-coffee"
   },
   {
     "id": 2,
-    "src": "/img/all-img/gallery2.jpg",
+    "title": "Café de especialidad",
+    "description": "Nuestros baristas preparan el mejor café de especialidad con granos seleccionados.",
+    "image": "/img/all-img/gallery2.jpg",
     "category": "Café",
-    "title": "Café de especialidad"
+    "icon": "bx-coffee"
   },
   {
     "id": 3,
-    "src": "/uploads/1747648186405-image-Photoroom (6).png",
+    "title": "Barista preparando espresso",
+    "description": "Nuestros expertos baristas preparan cada taza con dedicación y precisión.",
+    "image": "/uploads/1747648186405-image-Photoroom (6).png",
     "category": "Café",
-    "title": "Barista preparando espresso"
+    "icon": "bx-coffee"
   },
   {
     "id": 4,
-    "src": "/img/all-img/gallery4.jpg",
+    "title": "Taza de cappuccino",
+    "description": "Disfruta de nuestro delicioso cappuccino con la mejor espuma.",
+    "image": "/img/all-img/gallery4.jpg",
     "category": "Café",
-    "title": "Taza de cappuccino"
+    "icon": "bx-coffee"
   },
   {
     "id": 5,
-    "src": "/img/all-img/gallery5.jpg",
+    "title": "Ambiente SmartCoffee",
+    "description": "Un espacio moderno y acogedor para disfrutar de tu café favorito.",
+    "image": "/img/all-img/gallery5.jpg",
     "category": "Local",
-    "title": "Ambiente SmartCoffee"
+    "icon": "bx-store"
   },
   {
     "id": 6,
-    "src": "/img/all-img/gallery6.jpg",
+    "title": "Zona coworking",
+    "description": "Espacio ideal para trabajar y reunirte con colegas mientras disfrutas de un buen café.",
+    "image": "/img/all-img/gallery6.jpg",
     "category": "Local",
-    "title": "Zona coworking"
+    "icon": "bx-store"
   },
   {
     "id": 7,
-    "src": "/img/all-img/gallery7.jpg",
+    "title": "Decoración interior",
+    "description": "Diseño moderno y acogedor que combina tecnología y confort.",
+    "image": "/img/all-img/gallery7.jpg",
     "category": "Local",
-    "title": "Decoración interior"
+    "icon": "bx-store"
   },
   {
     "id": 8,
-    "src": "/img/all-img/gallery8.jpg",
+    "title": "Espacio de relax",
+    "description": "Un rincón perfecto para desconectar y disfrutar de un momento de paz.",
+    "image": "/img/all-img/gallery8.jpg",
     "category": "Local",
-    "title": "Espacio de relax"
+    "icon": "bx-store"
   },
   {
     "id": 9,
-    "src": "/img/all-img/gallery9.jpg",
+    "title": "Taller de café",
+    "description": "Aprende sobre el mundo del café con nuestros expertos baristas.",
+    "image": "/img/all-img/gallery9.jpg",
     "category": "Eventos",
-    "title": "Taller de café"
+    "icon": "bx-calendar-event"
   },
   {
     "id": 10,
-    "src": "/img/all-img/gallery10.jpg",
+    "title": "Charla de tecnología",
+    "description": "Eventos y charlas sobre las últimas tendencias tecnológicas.",
+    "image": "/img/all-img/gallery10.jpg",
     "category": "Eventos",
-    "title": "Charla de tecnología"
+    "icon": "bx-calendar-event"
   },
   {
     "id": 11,
-    "src": "/img/all-img/gallery11.jpg",
+    "title": "Networking SmartCoffee",
+    "description": "Conecta con profesionales en un ambiente relajado y productivo.",
+    "image": "/img/all-img/gallery11.jpg",
     "category": "Eventos",
-    "title": "Networking SmartCoffee"
+    "icon": "bx-calendar-event"
   },
   {
     "id": 12,
-    "src": "/img/all-img/gallery12.jpg",
+    "title": "After office",
+    "description": "Disfruta de un ambiente especial después del trabajo con música y bebidas.",
+    "image": "/img/all-img/gallery12.jpg",
     "category": "Eventos",
-    "title": "After office"
+    "icon": "bx-calendar-event"
   },
   {
     "id": 13,
-    "src": "/img/all-img/gallery13.jpg",
+    "title": "Obra digital en mural",
+    "description": "Exhibición de arte digital que combina tecnología y creatividad.",
+    "image": "/img/all-img/gallery13.jpg",
     "category": "Arte",
-    "title": "Obra digital en mural"
+    "icon": "bx-palette"
   },
   {
     "id": 14,
-    "src": "/img/all-img/gallery14.jpg",
+    "title": "Exposición de artistas",
+    "description": "Espacio dedicado a la exhibición de obras de artistas locales.",
+    "image": "/img/all-img/gallery14.jpg",
     "category": "Arte",
-    "title": "Exposición de artistas"
+    "icon": "bx-palette"
   },
   {
     "id": 15,
-    "src": "/img/all-img/gallery15.jpg",
+    "title": "Ilustración SmartCoffee",
+    "description": "Arte digital que representa la esencia de nuestra marca.",
+    "image": "/img/all-img/gallery15.jpg",
     "category": "Arte",
-    "title": "Ilustración SmartCoffee"
+    "icon": "bx-palette"
   },
   {
     "id": 16,
-    "src": "/img/all-img/gallery16.jpg",
+    "title": "Fotografía creativa",
+    "description": "Exposición de fotografía artística en nuestro espacio cultural.",
+    "image": "/img/all-img/gallery16.jpg",
     "category": "Arte",
-    "title": "Fotografía creativa"
+    "icon": "bx-palette"
   }
 ]
